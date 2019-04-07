@@ -1,11 +1,18 @@
 #!/bin/dash
 #Define target directory and number of files
 TARGET=$(zenity --file-selection --directory --title "Select a target directory.")
-if [ -z "$TARGET" ]; then exit 1; 
+if [ -z "$TARGET" ]; then
+  exit 1; 
+fi
+#Is target writeable?
+if [ ! -w "$TARGET" ] ; then
+   zenity --info --width=200 --text="You do not have permission to copy files to $TARGET"
+   exit 1
 fi
 NUMBER=$(zenity --entry --title="How many random files?" --text="Please enter an integer.")
 if ! [ ! -z "${NUMBER##*[!0-9]*}" ]; then
-   notify-send --expire-time=100000  "That's not an integer. Aborting operation. Please try again."; exit 1
+   zenity --info --width=200 --text="That's not an integer. Aborting operation. Please try again.";
+   exit 1
 fi
 #Send a notification for job start
 notify-send --expire-time=100000  "Get random files is working."
