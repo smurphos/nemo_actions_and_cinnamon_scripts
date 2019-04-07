@@ -74,27 +74,31 @@ These five actions immediately invoke the requested action.
 
 These actions give you a choice of actions for right click on a text based file to edit with admin privileges.
 
-The sudo_nano action will open the file in nano, a terminal text editor with admin privileges. Please take care as the option will display for files you currently own and editing these will change their ownership to root, which is probably not a desired outcome.
-
-The sudoedit action will also open the file in your systems default terminal text editor with admin privileges. Like sudo_nano it will appear on the context menu for files you own, but it will immediately close if you actually own the file.
+The sudo_nano action and associated script will open the file in nano a terminal based text editor, elevating privileges only if necessary. 
 
 [sudo_nano.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/sudo_nano.nemo_action)
 
-[sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/sudoedit.nemo_action)
+[sudo_nano_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/sudo_nano_check.sh)
 
-The xed_admin action uses the admin:// protocol to open files with elevated privileges in the text editor xed. This is a recommended method but a bit clunky as you are normally asked to authenticate twice.
+The xed_admin action and associated script will open the file in the text editor xed elevating privileges with admin:// if necessary.
 
 [xed_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/xed_admin.nemo_action)
 
-The xed_pkexec action uses polkit to open the file in xed with elevated privileges. It requires a polkit policy to be installed for xed in `usr/share/polkit-1/actions`
+[xed_admin_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/xed_admin_check.sh)
+
+The xed_pkexec action and associated script will open the file in the text editor xed elevating privileges with polkit if necessary. It requires a polkit policy to be installed for xed in `usr/share/polkit-1/actions`
 
 [xed_pkexec.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/xed_pkexec.nemo_action)
 
+[xed_pkexec_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/xed_pkexec_check.sh)
+
 [user.added.pkexec.xed.policy](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/usr/share/polkit-1/actions/user.added.pkexec.xed.policy)
 
-The geany_pkexec action is top open files with elevated privileges in an alternative text editor, geany -`apt install geany`. It also requires a polkit policy to be installed in in `usr/share/polkit-1/actions`
+The geany_pkexec action and associated script will open the file in the text editor geany `apt install geany`, elevating privileges with polkit if necessary. It requires a polkit policy to be installed for geany in `usr/share/polkit-1/actions`
 
 [geany_pkexec.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/geany_pkexec.nemo_action)
+
+[geany_pkexec_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/geany_pkexec_check.sh)
 
 [user.added.pkexec.geany.policy](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/usr/share/polkit-1/actions/user.added.pkexec.geany.policy)
 
