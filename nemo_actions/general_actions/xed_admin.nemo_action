@@ -1,9 +1,8 @@
 [Nemo Action]
 # Intended to facilitate opening root owned files with the default GUI text editor.
-# There is no way to limit this action visibility to files not owned by the user so take please take care.
-Name=Edit with xed admin://
-Comment=Open %F in xed with gvfs admin privileges. 
-Exec=xed admin://%F
+Name=Edit with xed (admin://)
+Comment=Open %F in xed escalating privileges if necessary 
+Exec=<xed_admin_check.sh %F>
 Icon-Name=document-edit-symbolic
 #Stock-Id=
 Selection=s

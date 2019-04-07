@@ -1,8 +1,8 @@
 [Nemo Action]
 
-Name=Edit with sudo nano
-Comment=Open %F with sudo nano. 
-Exec=sudo nano %F
+Name=Edit with (sudo) nano
+Comment=Open %F with nano escalating privileges if necessary
+Exec=<sudo_nano_check.sh %F>
 Icon-Name=document-edit-symbolic
 #Stock-Id=
 Selection=s

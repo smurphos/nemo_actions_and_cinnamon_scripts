@@ -1,10 +1,9 @@
 [Nemo Action]
 # Intended to facilitate opening root owned files with the default GUI text editor.
-# There is no way to limit this action visibility to files not owned by the user so take please take care.
 # This action requires that there is a valid polkit policy for xed in /usr/share/polkit-1/actions
-Name=Edit with pkexec xed
-Comment=Open %F in xed with admin privileges 
-Exec=sh -c 'pkexec xed %F'
+Name=Edit with (pkexec) xed
+Comment=Open %F in xed escalating privileges if necessary
+Exec=<xed_pkexec_check.sh %F>
 Icon-Name=document-edit-symbolic
 #Stock-Id=
 Selection=s
