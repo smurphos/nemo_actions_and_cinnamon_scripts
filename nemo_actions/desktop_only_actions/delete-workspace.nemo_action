@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Remove workspace
+Comment=Remove the currently active workspace
+Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.RemoveCurrentWorkspace >/dev/null'
+Selection=None
+Extensions=any;
+Conditions=desktop;dbus org.Cinnamon;gsettings org.cinnamon.desktop.wm.preferences num-workspaces i gt 1;
+Icon-Name=edit-delete-symbolic

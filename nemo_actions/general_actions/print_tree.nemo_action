@@ -1,0 +1,10 @@
+[Nemo Action]
+# Any action
+Name=Print tree
+Comment=Print tree output for #F to a html file and display in default browser
+Exec=<print_tree.sh %F>
+Icon-Name=sidebar-tree-symbolic
+Selection=any
+Extensions=dir;
+EscapeSpaces=true
+Dependencies=tree;

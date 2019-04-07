@@ -1,0 +1,11 @@
+[Nemo Action]
+# Requires searchmonkey to be installed (apt install searchmonkey).
+# Searchmonkey allows for search by file contents ;-)
+Name=Searchmonkey
+Comment=Search %F with searchmonkey
+Exec=searchmonkey -d %F
+Icon-Name=search-symbolic
+Selection=any
+Extensions=dir;
+EscapeSpaces=true
+Dependencies=searchmonkey;

@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Shutdown now 
+Comment=Shutdown the system immediately
+Exec=systemctl poweroff
+Selection=None
+Extensions=any;
+Icon-Name=system-shutdown-symbolic
+Dependencies=systemctl
+Conditions=desktop;

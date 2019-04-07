@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Workspace overview (Expo)
+Comment=Open worksapce overview to manage workspaces
+Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.ShowExpo >/dev/null'
+Selection=None
+Extensions=any;
+Conditions=desktop;dbus org.Cinnamon;
+Icon-Name=view-grid-symbolic

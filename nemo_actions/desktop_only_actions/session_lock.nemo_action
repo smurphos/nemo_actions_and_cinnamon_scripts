@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Lock session now
+Comment=Lock the session and activate screensaver
+Exec=cinnamon-screensaver-command -l
+Selection=None
+Extensions=any;
+Icon-Name=system-lock-screen-symbolic
+Dependencies=cinnamon-screensaver-command
+Conditions=desktop;

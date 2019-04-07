@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Touch file
+Comment=Touch file to update modified date
+Exec=touch %F
+Selection=notnone
+Extensions=any;
+Icon-Name=go-top-symbolic
+Dependencies=touch;
+EscapeSpaces=true

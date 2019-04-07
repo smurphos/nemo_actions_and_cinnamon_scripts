@@ -1,0 +1,10 @@
+[Nemo Action]
+# Due to a limitation in current Nemo versions this menu option may
+# still display if the slide-show has just been disabled
+Name=Next wallpaper
+Comment=Rotate desktop wallpaper
+Exec=dbus-send --print-reply --dest=org.Cinnamon.Slideshow /org/Cinnamon/Slideshow org.Cinnamon.Slideshow.getNextImage
+Icon-Name=media-seek-forward-symbolic
+Selection=none
+Extensions=any;
+Conditions=gsettings org.cinnamon.desktop.background.slideshow slideshow-enabled;desktop;

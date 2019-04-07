@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Shutdown dialogue
+Comment=Show the shutdown session dialogue
+Exec=cinnamon-session-quit --power-off
+Selection=None
+Extensions=any;
+Icon-Name=system-shutdown-symbolic
+Dependencies=cinnamon-session-quit
+Conditions=desktop;

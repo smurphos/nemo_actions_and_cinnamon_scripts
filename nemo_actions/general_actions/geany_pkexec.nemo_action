@@ -1,0 +1,18 @@
+[Nemo Action]
+# Intended to facilitate opening root owned files with the text editor geany
+# There is no way to limit this action visibility to files not owned by the user so take please take care.
+# This action requires that there is a valid polkit policy for geany in /usr/share/polkit-1/actions
+Name=Edit with pkexec geany
+Comment=Open %F with admin privileges in geany
+Exec=sh -c 'pkexec geany %F'
+Icon-Name=document-edit-symbolic
+#Stock-Id=
+Selection=s
+#Extensions=
+Mimetypes=text/plain;text/css;text/english;text/html;text/x-apt-sources-list;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-diff;text/x-dsrc;text/x-java;text/x-makefile;text/x-moc;text/x-pascal;text/x-perl;text/x-python;text/x-sql;text/x-tcl;text/x-tex;
+#Separator= 
+#Quote=
+Dependencies=geany;pkexec;
+#Conditions=
+EscapeSpaces=true
+#Terminal=

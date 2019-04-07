@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Session suspend
+Comment=Suspend the system
+Exec=systemctl suspend
+Selection=None
+Extensions=any;
+Icon-Name=system-suspend-symbolic
+Dependencies=systemctl
+Conditions=desktop;

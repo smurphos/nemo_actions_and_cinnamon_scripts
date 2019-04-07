@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Create new workspace
+Comment=Create a new workspace and move to it
+Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.JumpToNewWorkspace >/dev/null'
+Selection=None
+Extensions=any;
+Conditions=desktop;dbus org.Cinnamon;
+Icon-Name=tab-new-symbolic

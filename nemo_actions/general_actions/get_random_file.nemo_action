@@ -1,0 +1,11 @@
+[Nemo Action]
+# Ever needed a random selection of music, video or pictures from a folder?
+# If so this action is your friend.
+Name=Copy random files
+Comment=Copy a random selection of files from %F and paste them to a folder of your choice.
+Exec=<get_random_files.sh %F>
+Icon-Name=media-playlist-shuffle-symbolic
+Selection=any
+Extensions=dir;
+EscapeSpaces=true
+Dependencies=zenity;

@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Logout dialogue
+Comment=Show the logout session dialogue
+Exec=cinnamon-session-quit --logout
+Selection=None
+Extensions=any;
+Icon-Name=system-log-out-symbolic
+Dependencies=cinnamon-session-quit
+Conditions=desktop;

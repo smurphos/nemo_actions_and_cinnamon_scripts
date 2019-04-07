@@ -1,0 +1,12 @@
+[Nemo Action]
+# Requires xdotool - apt install xdotool
+# Assumes default keyboard shortcut for next workspace is unchanged
+
+Name=Next workspace
+Comment=Goto to next workspace
+Exec=xdotool key ctrl+alt+Right
+Selection=None
+Extensions=any;
+Icon-Name=go-next-symbolic
+Dependencies=xdotool;
+Conditions=desktop;
