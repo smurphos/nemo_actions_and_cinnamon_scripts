@@ -5,6 +5,8 @@ if [ -z "$DEST" ]; then exit 1;
 fi
 #Confirm name of link
 NAME=$(zenity --entry --width=200 --title "Link name" --text="Confirm link name" --entry-text="$2" )
-if [ -z "$NAME" ]; then exit 1; 
+if [ -z "$NAME" ]; then exit 1;
+fi 
 #Create link
+notify-send "Creating link to $1 at $DEST/$NAME"
 ln -s "$1" "$DEST/$NAME"
