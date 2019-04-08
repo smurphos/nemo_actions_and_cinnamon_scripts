@@ -6,12 +6,12 @@ if [ -z "$TARGET" ]; then
 fi
 #Is target writeable?
 if [ ! -w "$TARGET" ] ; then
-   zenity --info --width=200 --text="You do not have permission to copy files to $TARGET"
+   zenity --info --width=250 --text="You do not have permission to copy files to $TARGET"
    exit 1
 fi
 NUMBER=$(zenity --entry --title="How many random files?" --text="Please enter an integer.")
 if ! [ ! -z "${NUMBER##*[!0-9]*}" ]; then
-   zenity --info --width=200 --text="That's not an integer. Aborting operation. Please try again.";
+   zenity --info --width=250 --text="That's not an integer. Aborting operation. Please try again.";
    exit 1
 fi
 #Send a notification for job start

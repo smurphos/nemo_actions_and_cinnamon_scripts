@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Rename (Admin)
+Comment=Rename #F elevating privileges if necessary
+Exec=<rename_admin.sh %F %P %f>
+Icon-Name=document-edit-symbolic
+Selection=s
+Extensions=any;
+EscapeSpaces=true
+Dependencies=zenity;
