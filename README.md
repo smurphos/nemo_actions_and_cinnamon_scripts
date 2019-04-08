@@ -4,9 +4,9 @@ A collection of custom context menu actions for the Nemo file manager, along wit
 
 # Nemo Actions
 
-To install any particular action the `foo.nemo_action` file should be saved in `~./local/share/nemo/actions`
+To install any particular action the `foo.nemo_action` file should be saved in `~/.local/share/nemo/actions`
 
-Some of the actions in this repo also have an associated shell script. In all cases that script should also be saved in `~./local/share/nemo/actions` and be made executable.
+Some of the actions in this repo also have an associated shell script. In all cases that script should also be saved in `~/.local/share/nemo/actions` and be made executable.
 
 Two of the actions in this repo which allow users to open files owned by root with elevated privileges in a text-editor require a valid polkit policy for the text editor to be installed in `/usr/share/polkit-1/actions`. These can be found [here](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/tree/master/nemo_actions/usr/share/polkit-1/actions)
 
@@ -113,12 +113,33 @@ The other is for multiple selections and opens GPrename in the parent folder.
 
 #### Creating links
 
-An action and associated shell script to allow easy creation of symlinks to the target file/directory in a location of the users choice.
-Uses zenity - `apt install zenity` to ask the user to confirm a destination directory and link name.
+An action and associated shell script to allow easy creation of symlinks to the target file/directory in a location of the users choice. Uses zenity - `apt install zenity` to ask the user to confirm a destination directory and link name. The action will request password authentication if elevated privileges are necessary to write to the target directory.
 
 [create_link_in_target.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.nemo_action)
 
 [create_link_in_target.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.sh)
+
+#### File actions as admin
+
+These actions and their associated shell scripts allow the user to copy/paste, rename or delete files or directories with elevated privileges from a regular instance of Nemo. They will all request password authentication if elevated privileges are necessary to complete the action.
+
+##### Copy/paste (Admin)
+
+[paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/paste_admin.nemo_action)
+
+[paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/paste_admin.sh)
+
+##### Delete (Admin)
+
+[delete_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.nemo_action)
+
+[delete_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.sh)
+
+##### Rename (Admin)
+
+[rename_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.nemo_action)
+
+[rename_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.sh)
 
 #### Media info
 
