@@ -72,7 +72,7 @@ These five actions immediately invoke the requested action.
 
 #### Open with admin privileges actions
 
-These actions give you a choice of actions for right click on a text based file to edit with admin privileges.
+These actions give you a choice of applications to edit text based files with admin privileges.
 
 The sudo_nano action and associated script will open the file in nano a terminal based text editor, elevating privileges only if necessary. 
 
@@ -113,7 +113,7 @@ The other is for multiple selections and opens GPrename in the parent folder.
 
 #### Creating links
 
-An action and associated shell script to allow easy creation of symlinks to the target file/directory in a location of the users choice. Uses zenity - `apt install zenity` to ask the user to confirm a destination directory and link name. The action will request password authentication if elevated privileges are necessary to write to the target directory.
+An action and associated shell script to allow easy creation of symlinks to the target file/directory in a location of the users choice. Uses zenity - `apt install zenity` to ask the user to confirm a destination directory and link name. The action will request password authentication if elevated privileges are necessary to write to the destination directory.
 
 [create_link_in_target.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.nemo_action)
 
@@ -121,7 +121,7 @@ An action and associated shell script to allow easy creation of symlinks to the 
 
 #### File actions as admin
 
-These actions and their associated shell scripts allow the user to copy/paste, rename or delete files or directories with elevated privileges from a regular instance of Nemo. They will all request password authentication if elevated privileges are necessary to complete the action.
+These actions and their associated shell scripts allow the user to copy/paste, rename or delete files or directories with elevated privileges from a regular instance of Nemo. They will all request password authentication if elevated privileges are necessary to complete the action. All require zenity - `apt install zenity`
 
 ##### Copy/paste (Admin)
 
