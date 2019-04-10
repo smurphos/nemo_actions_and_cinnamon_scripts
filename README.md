@@ -102,6 +102,72 @@ The geany_pkexec action and associated script will open the file in the text edi
 
 [user.added.pkexec.geany.policy](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/usr/share/polkit-1/actions/user.added.pkexec.geany.policy)
 
+#### File actions as admin
+
+These actions and their associated shell scripts allow the user to undertake a range of file management activities with elevated privileges if needed from a regular instance of Nemo.
+
+They will all request password authentication if elevated privileges are necessary to complete the action. All require zenity - `apt install zenity`
+
+##### Copy/paste (Admin)
+
+Supports single and multiple selections. Uses zenity to select destination.
+
+[copy_paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/copy_paste_admin.nemo_action)
+
+[copy_paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/copy_paste_admin.sh)
+
+##### Cut/paste (Admin)
+
+Supports single and multiple selections. Uses zenity to select destination.
+
+[cut_paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/cut_paste_admin.nemo_action)
+
+[cut_paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/cut_paste_admin.sh)
+
+##### Creating links (Admin)
+
+Supports single selections only . Uses zenity to select destination.
+
+[create_link_in_target.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.nemo_action)
+
+[create_link_in_target.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.sh)
+
+##### Create Directory (Admin)
+
+This action has two nemo_action files, one for right-click on a directory, and one for right-click on empty space.
+
+[create_dir_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_dir_admin.nemo_action)
+
+[create_dir_admin_background.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_dir_admin_background.nemo_action)
+
+[create_dir_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_dir_admin.sh)
+
+##### Create File (Admin)
+
+This action has two nemo_action files, one for right-click on a directory, and one for right-click on empty space.
+
+[create_file_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_file_admin.nemo_action)
+
+[create_file_admin_background.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_file_admin_background.nemo_action)
+
+[create_file_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_file_admin.sh)
+
+##### Delete (Admin)
+
+Supports single and multiple selections.
+
+[delete_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.nemo_action)
+
+[delete_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.sh)
+
+##### Rename (Admin)
+
+Supports single selections only.
+
+[rename_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.nemo_action)
+
+[rename_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.sh)
+
 #### Bulk rename actions
 
 Both these actions open the bulk rename utility GPrename - `apt install gprename`. One action is for a single folder selection to bulk rename files in that folder.
@@ -110,36 +176,6 @@ The other is for multiple selections and opens GPrename in the parent folder.
 [bulk_rename_files.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/bulk_rename_files.nemo_action)
 
 [bulk_rename_folders.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/bulk_rename_folders.nemo_action)
-
-#### Creating links
-
-An action and associated shell script to allow easy creation of symlinks to the target file/directory in a location of the users choice. Uses zenity - `apt install zenity` to ask the user to confirm a destination directory and link name. The action will request password authentication if elevated privileges are necessary to write to the destination directory.
-
-[create_link_in_target.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.nemo_action)
-
-[create_link_in_target.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/create_link_in_target.sh)
-
-#### File actions as admin
-
-These actions and their associated shell scripts allow the user to copy/paste, rename or delete files or directories with elevated privileges from a regular instance of Nemo. They will all request password authentication if elevated privileges are necessary to complete the action. All require zenity - `apt install zenity`
-
-##### Copy/paste (Admin)
-
-[paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/paste_admin.nemo_action)
-
-[paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/paste_admin.sh)
-
-##### Delete (Admin)
-
-[delete_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.nemo_action)
-
-[delete_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/delete_admin.sh)
-
-##### Rename (Admin)
-
-[rename_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.nemo_action)
-
-[rename_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/rename_admin.sh)
 
 #### Media info
 
