@@ -5,10 +5,11 @@ if [ -z "$DEST" ]; then
   exit 1; 
 fi
 #Confirm name of link
-if [ ! -e "$DEST/$2" ]; then
-  NAME=$(zenity --entry --width=250 --title "Link name" --text="Confirm link name" --entry-text="$2" )
+FILE=$(basename "$1")
+if [ ! -e "$DEST/$FILE" ]; then
+  NAME=$(zenity --entry --width=250 --title "Link name" --text="Confirm link name" --entry-text="$FILE" )
 else
-  NAME=$(zenity --entry --width=250 --title "Link name" --text="Confirm link name" --entry-text="Link to $2" )
+  NAME=$(zenity --entry --width=250 --title "Link name" --text="Confirm link name" --entry-text="Link to $FILE" )
 fi
 if [ -z "$NAME" ]; then
   exit 1;
@@ -21,6 +22,9 @@ fi
 #Is destination writeable?
 if [ ! -w "$DEST" ] ; then
   PASS=$(zenity --password --title="Authenticate to create link.")
+  if [ -z "$PASS" ]; then
+   exit 1
+  fi
   echo -e "$PASS" | sudo -S ln -s "$1" "$DEST/$NAME"
 else
   ln -s "$1" "$DEST/$NAME"

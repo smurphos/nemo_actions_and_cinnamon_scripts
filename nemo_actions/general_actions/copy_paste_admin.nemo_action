@@ -1,9 +1,9 @@
 [Nemo Action]
 Name=Copy/paste (Admin)
 Comment=Copy/paste #F elevating privileges if necessary.
-Exec=<paste_admin.sh %F %f>
+Exec=<copy_paste_admin.sh %F>
 Icon-Name=edit-copy-symbolic
-Selection=s
+Selection=notnone
 Extensions=any;
 EscapeSpaces=true
 Dependencies=zenity;

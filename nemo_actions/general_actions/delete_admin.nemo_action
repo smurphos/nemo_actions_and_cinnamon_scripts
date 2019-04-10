@@ -1,9 +1,11 @@
 [Nemo Action]
+# An action to delete a file or directory and it's contents.
+# Will request password authentication if elevated privileges are needed to complete the action.
 Name=Delete (Admin)
 Comment=Delete #F elevating privileges if necessary
-Exec=<delete_admin.sh %F %P>
-Icon-Name=delete-symbolic
-Selection=s
+Exec=<delete_admin.sh %F>
+Icon-Name=edit-delete-symbolic
+Selection=notnone
 Extensions=any;
 EscapeSpaces=true
 Dependencies=zenity;

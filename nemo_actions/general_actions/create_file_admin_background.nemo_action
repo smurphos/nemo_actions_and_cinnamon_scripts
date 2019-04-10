@@ -1,0 +1,12 @@
+[Nemo Action]
+# An action to create a new file on right click on empty space in nemo.
+# Will request password authentication if elevated privileges are needed to complete the action.
+# Requires companion script create_file_admin.sh
+Name=Create file (Admin)
+Comment=Create a file in %F elevating privileges in necessary
+Exec=<create_file_admin.sh %F>
+Selection=none
+Extensions=dir;
+Icon-Name=document-new-symbolic
+Dependencies=touch;
+EscapeSpaces=true
