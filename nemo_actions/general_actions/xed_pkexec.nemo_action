@@ -4,7 +4,7 @@
 Name=Edit with (pkexec) xed
 Comment=Open %F in xed escalating privileges if necessary
 Exec=<xed_pkexec_check.sh %F>
-Icon-Name=document-edit-symbolic
+Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
 #Extensions=

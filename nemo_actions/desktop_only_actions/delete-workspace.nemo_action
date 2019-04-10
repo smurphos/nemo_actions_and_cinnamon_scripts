@@ -1,5 +1,5 @@
 [Nemo Action]
-
+# Remove current workspace.
 Name=Remove workspace
 Comment=Remove the currently active workspace
 Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.RemoveCurrentWorkspace >/dev/null'

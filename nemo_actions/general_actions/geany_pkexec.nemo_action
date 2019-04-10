@@ -4,7 +4,7 @@
 Name=Edit with (pkexec) geany
 Comment=Open %F with geany escalating privileges if necessary
 Exec=<geany_pkexec_check.sh %F>
-Icon-Name=document-edit-symbolic
+Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
 #Extensions=

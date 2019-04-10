@@ -4,6 +4,6 @@ Comment=Touch file to update modified date
 Exec=touch %F
 Selection=notnone
 Extensions=any;
-Icon-Name=go-top-symbolic
+Icon-Name=edit-select-symbolic
 Dependencies=touch;
 EscapeSpaces=true

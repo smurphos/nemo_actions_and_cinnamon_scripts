@@ -4,6 +4,6 @@ Comment=Reboot the system immediately
 Exec=systemctl reboot
 Selection=None
 Extensions=any;
-Icon-Name=system-reboot-symbolic
+Icon-Name=system-shutdown-symbolic
 Dependencies=systemctl;
 Conditions=desktop;

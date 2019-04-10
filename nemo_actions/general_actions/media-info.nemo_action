@@ -3,7 +3,7 @@
 Name=Media properties
 Comment=Open %F with mediainfo-gui
 Exec=mediainfo-gui %F
-Icon-Name=media-view-subtitles-symbolic
+Icon-Name=applications-multimedia-symbolic
 #Stock-Id=
 Selection=s
 #Extensions=

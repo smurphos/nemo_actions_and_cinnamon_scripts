@@ -4,7 +4,7 @@
 Name=Searchmonkey
 Comment=Search %F with searchmonkey
 Exec=searchmonkey -d %F
-Icon-Name=search-symbolic
+Icon-Name=system-search-symbolic
 Selection=any
 Extensions=dir;
 EscapeSpaces=true

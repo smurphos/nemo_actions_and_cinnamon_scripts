@@ -4,6 +4,6 @@ Comment=Show the logout session dialogue
 Exec=cinnamon-session-quit --logout
 Selection=None
 Extensions=any;
-Icon-Name=system-log-out-symbolic
+Icon-Name=system-users-symbolic
 Dependencies=cinnamon-session-quit
 Conditions=desktop;

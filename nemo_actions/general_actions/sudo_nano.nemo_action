@@ -3,7 +3,7 @@
 Name=Edit with (sudo) nano
 Comment=Open %F with nano escalating privileges if necessary
 Exec=<sudo_nano_check.sh %F>
-Icon-Name=document-edit-symbolic
+Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
 #Extensions=
