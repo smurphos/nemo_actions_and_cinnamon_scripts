@@ -1,0 +1,10 @@
+[Nemo Action]
+# Requires shellcheck to be installed (apt install shellcheck)
+Name=Shellcheck
+Comment=Lint %F with shellcheck
+Exec=<scripts/shellcheck.sh %F>
+Icon-Name=system-search-symbolic
+Selection=notnone
+Mimetypes=application/x-shellscript;
+EscapeSpaces=true
+Dependencies=shellcheck;

@@ -201,6 +201,15 @@ An action and associated shell script to quickly add or remove a ✓ emblem to t
 
 [touch_file.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/.local/share/nemo/actions/touch_file.nemo_action)
 
+#### Check a shell script for errors
+
+This action and associated shell script will check your shell scripts for errors with shellcheck `apt install shellcheck`
+Scripts with no issues will be marked with a checked emblem, scripts with warnings will be marked with a warning emblem and the shellcheck output along with the shell script itself will be opened in a text editor for review.
+
+[shellcheck.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/.local/share/nemo/actions/shellcheck.nemo_action)
+
+[shellcheck.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/.local/share/nemo/actions/scripts/shellcheck.sh)
+
 # Cinnamon Scripts
 
 The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local/bin` and be made executable. Please see comment lines in the header of each script for any additional steps needed to install and use the specific script.
