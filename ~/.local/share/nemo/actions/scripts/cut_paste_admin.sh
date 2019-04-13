@@ -8,7 +8,7 @@ for i in "$@"; do
 #Check not overwriting an existing file or directory
   FILE=$(basename "$i")
   if [ -e "$DEST/$FILE" ]; then
-    NAME=$(zenity --entry --width=250 --title "File name" --text="$DEST/$FILE already exists. Please select an alternative file name" --entry-text=""$FILE"_(Copy)")
+    NAME=$(zenity --entry --width=250 --title "File name" --text="$DEST/$FILE already exists. Please select an alternative file name" --entry-text="$FILE(Copy)")
     if [ -z "$NAME" ]; then
      exit 1
     fi

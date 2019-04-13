@@ -1,5 +1,5 @@
 #!/bin/dash
-if ls -l "$1" | grep -q $USER; then
+if [ "$(stat -c %U "$1")" = "$USER" ]; then
 	nano "$1"
 else
 	sudo nano "$1"

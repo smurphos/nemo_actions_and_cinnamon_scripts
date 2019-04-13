@@ -31,7 +31,7 @@ NOTWINDOWS=$(wmctrl -l | awk "/ -1 / || /$EXCLUSION1/ || /$EXCLUSION2/" | cut -f
 
 # close windows gracefully
 for i in $WINDOWS; do
-  if [ ! $(echo "$NOTWINDOWS" | grep -w "$i") ]; then
+  if ! echo "$NOTWINDOWS" | grep -wq "$i" ; then
     wmctrl -ic "$i"
   fi
   sleep 0.1

@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/bash
 #Define target directory and number of files
 TARGET=$(zenity --file-selection --directory --title "Select a target directory.")
 if [ -z "$TARGET" ]; then
@@ -10,7 +10,7 @@ if [ ! -w "$TARGET" ] ; then
    exit 1
 fi
 NUMBER=$(zenity --entry --title="How many random files?" --text="Please enter an integer.")
-if ! [ ! -z "${NUMBER##*[!0-9]*}" ]; then
+if ! [[ $NUMBER =~ ^[0-9]+$ ]]; then
    zenity --info --width=250 --text="That's not an integer. Aborting operation. Please try again.";
    exit 1
 fi

@@ -1,7 +1,7 @@
 #!/bin/bash
 for i in "$@"; do
 #Is directory writeable?
-  if [ ! -w $(dirname "$i") ]; then
+  if [ ! -w "$(dirname "$i")" ]; then
     if [ -z "$PASS" ]; then
     PASS=$(zenity --password --title="Authenticate to delete.")
     fi
