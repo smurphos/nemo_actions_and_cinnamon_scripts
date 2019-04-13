@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Cut/paste (Admin)
 Comment=Cut/paste #F elevating privileges if necessary.
-Exec=<cut_paste_admin.sh %F>
+Exec=<scripts/cut_paste_admin.sh %F>
 Icon-Name=edit-cut-symbolic
 Selection=notnone
 Extensions=any;

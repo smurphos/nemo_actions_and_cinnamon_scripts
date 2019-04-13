@@ -3,7 +3,7 @@
 # Will request password authentication if elevated privileges are needed to complete the action.
 Name=Create link to (Admin)
 Comment=Create a link to #F in a user selected destination directory
-Exec=<create_link_in_target.sh %F>
+Exec=<scripts/create_link_in_target.sh %F>
 Icon-Name=insert-link-symbolic
 Selection=s
 Extensions=any;

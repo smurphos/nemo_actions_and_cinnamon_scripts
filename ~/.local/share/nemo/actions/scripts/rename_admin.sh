@@ -1,6 +1,6 @@
 #!/bin/bash
 #Get new name
-NAME=$(zenity --entry --width=250 --title "Link name" --text="Confirm new filename" --entry-text="$3" )
+NAME=$(zenity --entry --width=250 --title "File name" --text="Confirm new filename" --entry-text="$3" )
 if [ -z "$NAME" ]; then
   exit 1; 
 fi

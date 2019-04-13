@@ -1,10 +1,10 @@
 [Nemo Action]
 # A desktop context menu item to gracefully close all open application
-# windows in all workspaces.
+# windows in the current workspace
 # Requires wmctrl (apt install wmctrl) and xdotool (apt install xdotool).
-Name=Close all windows
-Comment=Close all windows in all workspaces
-Exec=<close_windows.sh all>
+Name=Close all windows in this workspace
+Comment=Close all windows in current workspace
+Exec=<scripts/close_windows.sh workspace>
 Selection=None
 Extensions=any;
 Icon-Name=application-exit-symbolic

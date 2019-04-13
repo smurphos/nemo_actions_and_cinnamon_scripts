@@ -1,8 +1,9 @@
 [Nemo Action]
-
-Name=Edit with (sudo) nano
-Comment=Open %F with nano escalating privileges if necessary
-Exec=<sudo_nano_check.sh %F>
+# Intended to facilitate opening root owned files with the default GUI text editor.
+# This action requires that there is a valid polkit policy for xed in /usr/share/polkit-1/actions
+Name=Edit with (pkexec) xed
+Comment=Open %F in xed escalating privileges if necessary
+Exec=<scripts/xed_pkexec_check.sh %F>
 Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
@@ -10,7 +11,7 @@ Selection=s
 Mimetypes=text/plain;text/css;text/english;text/html;text/x-apt-sources-list;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-diff;text/x-dsrc;text/x-java;text/x-makefile;text/x-moc;text/x-pascal;text/x-perl;text/x-python;text/x-sql;text/x-tcl;text/x-tex;
 #Separator= 
 #Quote=
-Dependencies=sudo;nano;
+Dependencies=xed;pkexec;
 #Conditions=
 EscapeSpaces=true
-Terminal=true
+#Terminal=

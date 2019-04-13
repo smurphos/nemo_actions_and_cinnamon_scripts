@@ -2,7 +2,7 @@
 # Any action
 Name=Print tree
 Comment=Print tree output for #F to a html file and display in default browser
-Exec=<print_tree.sh %F>
+Exec=<scripts/print_tree.sh %F>
 Icon-Name=view-list-symbolic
 Selection=any
 Extensions=dir;
