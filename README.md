@@ -10,18 +10,6 @@ An action can be added to Nemo by saving it's definition file with the file exte
 
 Some actions in this repo also require an associated shell script. These should be saved in `~/.local/share/nemo/actions/scripts` and be made executable
 
-# Cinnamon Scripts
-
-The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local/bin` and be made executable. Please see comment lines in the header of each script for any additional steps needed to install and use the specific script.
-
-## Cinnamon Scripts Index
-
-#### Lock Screen Slideshow
-
-This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
-
-[lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/lock_screen_slideshow.sh)
-
 ## Nemo Actions Index
 
 ### Desktop context menu actions
@@ -212,3 +200,15 @@ An action and associated shell script to quickly add or remove a ✓ emblem to t
 #### Update a files modification date
 
 [touch_file.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/.local/share/nemo/actions/touch_file.nemo_action)
+
+# Cinnamon Scripts
+
+The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local/bin` and be made executable. Please see comment lines in the header of each script for any additional steps needed to install and use the specific script.
+
+## Cinnamon Scripts Index
+
+#### Lock Screen Slideshow
+
+This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
+
+[lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/lock_screen_slideshow.sh)
