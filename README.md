@@ -219,11 +219,33 @@ The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local
 #### Lock Screen Slideshow
 
 This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
+It is intended to be run on user login as a startup application.
 
 [lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/lock_screen_slideshow.sh)
 
 #### Login Screen Random Background
 
 This script facilitates the user being presented with a random background on the login screen. It is compatible with any Mint edition using Slick-Greeter and LightDM, not just Cinnamon.
+It is intended to be run from the root crontab - `sudo crontab -e`
 
 [login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/login_screen_random_background.sh)
+
+#### Workspace Background Switcher
+
+This script allows the user to different backgrounds for each Cinnamon workspace. It is intended to be run on user login as a startup application.
+
+[workspace_background_switcher.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/workspace_background_switcher.sh)
+
+#### Opacify Windows
+
+This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.
+The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application.
+
+[opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/opacify_windows.sh)
+
+#### Battery Event Warnings
+
+This script uses zenity - `apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
+It is intended to be run on user login as a startup application.
+
+[battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/battery_mon.sh)
