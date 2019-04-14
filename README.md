@@ -221,3 +221,9 @@ The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local
 This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
 
 [lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/lock_screen_slideshow.sh)
+
+#### Login Screen Random Background
+
+This script facilitates the user being presented with a random background on the login screen. It is compatible with any Mint edition using Slick-Greeter and LightDM, not just Cinnamon.
+
+[login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/~/bin/login_screen_random_background.sh)
