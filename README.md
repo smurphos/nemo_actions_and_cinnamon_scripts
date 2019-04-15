@@ -1,7 +1,7 @@
 # Nemo Actions & Cinnamon Scripts
 
 A collection of custom context menu actions for the Nemo file manager, along with some [miscellaneous feature scripts](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts) intended for the Cinnamon desktop environment.
-Also included is a GTK over-ride file to increase the width of scrollbars and improve the visibility of labels on desktop icons.
+Also included is a [GTK over-ride](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#miscellaneous-tweaks) file to increase the width of scrollbars and improve the visibility of labels on desktop icons.
 
 # Nemo Actions
 
