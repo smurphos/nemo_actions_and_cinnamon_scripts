@@ -281,7 +281,7 @@ This script allows the user to different backgrounds for each Cinnamon workspace
 #### Opacify Windows
 
 This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.
-The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application.
+The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application. Requires xdotool and wmctrl - `apt install xdotool wmctrl`
 
 [opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/opacify_windows.sh)
 
