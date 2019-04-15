@@ -10,6 +10,21 @@ An action can be added to Nemo by saving it's definition file with the file exte
 
 Some actions in this repo also require an associated shell script. These should be saved in `~/.local/share/nemo/actions/scripts` and be made executable
 
+## Nemo Action installation
+
+First clone this repo
+`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
+
+Having cloned the repo you can either install of the actions and/or scripts using the commands below or refer to the index of actions / scripts to install specific actions or scripts.
+
+To install all of the nemo actions
+`cp -rv ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/ ~/.local/share/nemo`
+
+Install other dependencies used by the actions
+`apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree`
+
+Open Nemo > Preferences > Plugins and review any actions you wish to disable.
+
 ## Nemo Actions Index
 
 ### Desktop context menu actions
@@ -212,7 +227,34 @@ Scripts with no issues will be marked with a checked emblem, scripts with warnin
 
 # Cinnamon Scripts
 
-The standalone Cinnamon Scripts should normally be saved in `~/bin` or `~/.local/bin` and be made executable. Please see comment lines in the header of each script for any additional steps needed to install and use the specific script.
+This is a small selection of feature scripts that add new features or improve existing features for the Cinnamon desktop.
+
+## Cinnamon Scripts Installation
+
+First clone this repo if you haven't already.
+`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
+
+To install all of the cinnamon scripts
+`cp -rv ./nemo_actions_and_cinnamon_scripts/.local/bin/ ~/.local`
+
+To install autostart entries for relevant scripts
+`cp -rv ./nemo_actions_and_cinnamon_scripts/.config/autostart/ ~/.config`
+
+Login Screen Random Background is intended to be run from the root crontab. To set up run
+`sudo crontab -e`
+
+In the CLI text editor that opens add the following lines to the bottom of the file replacing `username` with your actual username.
+Ctrl-O, Enter, Ctrl-X to save the new crontab entries. This will run the script on boot and every half an hour.
+
+```
+@reboot /home/username/.local/bin/login_screen_random_background.sh
+0,30 * * * * /home/username/.local/bin/login_screen_random_background.sh
+```
+
+Install dependencies required by the scripts
+`apt install zenity xdotool wmctrl`
+
+Review script content and adjust any end user adjustable parameters.
 
 ## Cinnamon Scripts Index
 
