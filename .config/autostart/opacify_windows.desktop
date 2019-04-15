@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=opacify_windows.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_GB]=opacify_windows.desktop
+Comment[en_GB]=Manage windows opacity
+X-GNOME-Autostart-Delay=0

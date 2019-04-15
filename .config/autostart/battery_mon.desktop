@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=battery_mon.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_GB]=battery_mon.desktop
+Comment[en_GB]=Low battery alerts
+X-GNOME-Autostart-Delay=15

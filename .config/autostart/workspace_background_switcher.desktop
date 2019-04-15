@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=workspace_background_switcher.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_GB]=workspace_background_switcher.desktop
+Comment[en_GB]=Per workspace backgrounds
+X-GNOME-Autostart-Delay=15
