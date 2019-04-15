@@ -1,13 +1,13 @@
 #!/bin/bash
-# Script to set a per workspace desktop background in Cinnamon - as written for 19 Tara.
+# Script to set a per workspace desktop background in Cinnamon.
 # Save as ~/bin/workspace_backgrounds_switcher.sh or ~/.local/bin/workspace_backgrounds_switcher.sh and make executable
 # Add an entry in startup applications to launch the script on start-up.
 
 # Set your images here - one per active workspace.
 # Add extra WORKSPACE_BACKGROUND[X] entries as necessary.
-WORKSPACE_BACKGROUND[0]="/usr/share/backgrounds/linuxmint-tara/aaronphs_hawaii.jpg"
-WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint-tara/bfantinatti_flower.jpg"
-WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint-tara/jowens_kauai.jpg"
+WORKSPACE_BACKGROUND[0]="/usr/share/backgrounds/linuxmint/bookwood_linuxmint.jpg"
+WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint/edesigner_linuxmint.jpg"
+WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.jpg"
 
 
 # Check for existing instance and exit if already running
