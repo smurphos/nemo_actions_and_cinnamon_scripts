@@ -1,6 +1,7 @@
 # Nemo Actions & Cinnamon Scripts
 
 A collection of custom context menu actions for the Nemo file manager, along with some [miscellaneous feature scripts](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts) intended for the Cinnamon desktop environment.
+Also included is a GTK over-ride file to increase the width of scrollbars and improve the visibility of labels on desktop icons.
 
 # Nemo Actions
 
@@ -256,6 +257,8 @@ Install dependencies required by the scripts
 
 Review script content and adjust any end user adjustable parameters.
 
+Log off and back on.
+
 ## Cinnamon Scripts Index
 
 #### Lock Screen Slideshow
@@ -263,31 +266,51 @@ Review script content and adjust any end user adjustable parameters.
 This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
 It is intended to be run on user login as a startup application.
 
-[lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/lock_screen_slideshow.sh)
+[lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/lock_screen_slideshow.sh)
 
 #### Login Screen Random Background
 
 This script facilitates the user being presented with a random background on the login screen. It is compatible with any Mint edition using Slick-Greeter and LightDM, not just Cinnamon.
 It is intended to be run from the root crontab - `sudo crontab -e`
 
-[login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/login_screen_random_background.sh)
+[login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/login_screen_random_background.sh)
 
 #### Workspace Background Switcher
 
 This script allows the user to different backgrounds for each Cinnamon workspace. It is intended to be run on user login as a startup application.
 
-[workspace_background_switcher.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/workspace_background_switcher.sh)
+[workspace_background_switcher.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/workspace_background_switcher.sh)
 
 #### Opacify Windows
 
 This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.
 The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application. Requires xdotool and wmctrl - `apt install xdotool wmctrl`
 
-[opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/opacify_windows.sh)
+[opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/opacify_windows.sh)
 
 #### Battery Event Warnings
 
 This script uses zenity - `apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
 It is intended to be run on user login as a startup application.
 
-[battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/bin/battery_mon.sh)
+[battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/battery_mon.sh)
+
+# Miscellaneous tweaks
+
+## GTK over-ride
+
+This small gtk,css file is intended to 1) Improve visibility of desktop icon labels on light coloured backgrounds and 2) Increase the width of scroll bars in GTK3 apps. It will also make the scrollbars react to changes in text scaling.
+
+[gtk.css](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.config/gtk-3.0/gtk.css)
+
+## Installation
+
+First clone this repo if you haven't already.
+`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
+
+To install the gtk.css over-ride file
+`cp -rv ./nemo_actions_and_cinnamon_scripts/.config/gtk-3.0/ ~/.config`
+
+Log off and back on.
+
+

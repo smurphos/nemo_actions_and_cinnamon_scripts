@@ -1,0 +1,31 @@
+/* Nemo desktop over-rides */
+/* Improve visibility of icon labels on light backgrounds */
+.nemo-desktop.nemo-canvas-item {
+    color: #fff;
+    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
+}
+/* Eliminate hover effects on label */
+.nemo-desktop.nemo-canvas-item:hover {
+    background-color: transparent;
+    background-image: none;
+}
+/* Improve theme integration for selected icon label effects */
+.nemo-desktop.nemo-canvas-item:selected {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+    color: @theme_selected_fg_color;
+    text-shadow: none;
+}
+
+/* Scrollbar fixes */
+scrollbar.vertical slider,
+scrollbar.slider.vertical
+{
+    min-width: 1em;
+}
+scrollbar.horizontal slider,
+scrollbar.slider.horizontal
+{
+    min-height: 1em;
+}
+
