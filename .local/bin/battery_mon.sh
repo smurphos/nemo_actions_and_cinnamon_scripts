@@ -1,8 +1,8 @@
 #!/bin/dash
 
 # Script to send persistent notification on low battery events
-# Depends on zenity - install via apt install zenity
-# Save script in ~/bin or ~/.local/share/bin and make executable.
+# Depends on zenity - apt install zenity
+# Save script in ~/bin or ~/.local/bin and make executable.
 # Add an entry to your startup applications.
 
 # Check for existing instance and exit if already running
