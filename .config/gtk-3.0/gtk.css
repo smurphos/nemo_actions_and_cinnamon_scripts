@@ -17,7 +17,7 @@
     text-shadow: none;
 }
 
-/* Scrollbar fixes */
+/* Scrollbar width fixes */
 scrollbar.vertical slider,
 scrollbar.slider.vertical
 {
@@ -29,3 +29,13 @@ scrollbar.slider.horizontal
     min-height: 1em;
 }
 
+/* Better visibility of screen-saver text on light backgrounds */
+.csstage .unlockbox,
+.csstage .clock,
+.csstage .notificationwidget,
+.csstage .powerwidget,
+.csstage .trackname,
+.csstage .albumartist  {
+    color: #fff;
+    text-shadow: 0px 0px 2px #000, 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000, 1px 0px #000, 0px 1px #000, -1px 0px #000, 0px -1px #000;
+}
