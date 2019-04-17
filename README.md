@@ -533,9 +533,9 @@ To install after cloning repo
 
 # Miscellaneous tweaks
 
-## GTK over-ride
+## GTK over-ride for Cinnamon
 
-This small gtk,css file is intended to 1) Improve visibility of desktop icon labels on light coloured backgrounds and 2) Increase the width of scroll bars in GTK3 apps. It will also make the scrollbars react to changes in text scaling.
+This small gtk.css file over-rides is intended to improve visibility of desktop icon labels and screen-saver / screen-locker text on light coloured backgrounds. It also increases the width of scroll bars in GTK3 apps and allows the scrollbars size to vary with changes in text scaling factor.
 
 [gtk.css](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.config/gtk-3.0/gtk.css)
 
