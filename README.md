@@ -542,9 +542,11 @@ This small gtk.css file over-rides is intended to improve visibility of desktop 
 ## Installation
 
 First clone this repo if you haven't already.
+
 `git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
 
 To install the gtk.css over-ride file
+
 `cp -rv ./nemo_actions_and_cinnamon_scripts/.config/gtk-3.0/ ~/.config`
 
 Log off and back on.
