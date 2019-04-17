@@ -444,6 +444,8 @@ It is intended to be run on user login as a startup application.
 
 To install after cloning repo
 
+`mkdir ~/.local/bin`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/lock_screen_slideshow.sh ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/lock_screen_slideshow.desktop ~/.config/autostart`
@@ -462,6 +464,8 @@ It is intended to be run from the root crontab - `sudo crontab -e`
 [login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/login_screen_random_background.sh)
 
 To install after cloning repo
+
+`mkdir ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/login_screen_random_background.sh ~/.local/bin`
 
@@ -489,6 +493,8 @@ This script allows the user to different backgrounds for each Cinnamon workspace
 
 To install after cloning repo
 
+`mkdir ~/.local/bin`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/workspace_background_switcher.sh ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/workspace_background_switcher.desktop ~/.config/autostart`
@@ -505,6 +511,8 @@ The effect is independent of the users theme and can be used with any GTK theme.
 [opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/opacify_windows.sh)
 
 To install after cloning repo
+
+`mkdir ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/opacify_windows.sh ~/.local/bin`
 
@@ -524,6 +532,8 @@ It is intended to be run on user login as a startup application.
 [battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/battery_mon.sh)
 
 To install after cloning repo
+
+`mkdir ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/battery_mon.sh ~/.local/bin`
 
