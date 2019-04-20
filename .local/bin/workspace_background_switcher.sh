@@ -11,11 +11,9 @@ WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.jpg"
 
 
 # Check for existing instance and exit if already running
-for PID in $(pgrep -f "${0##*/}"); do
-    if [ "$PID" != $$ ]; then
-        exit 1
-    fi  
-done
+if pidof -o %PPID -x "${0##*/}"; then
+  exit 1
+fi
 # Monitor for workspace changes and set the background on change.
 xprop -root -spy _NET_CURRENT_DESKTOP | while read -r;
   do

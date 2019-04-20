@@ -6,11 +6,9 @@
 # Add an entry to your startup applications.
 
 # Check for existing instance and exit if already running
-for PID in $(pgrep -f "${0##*/}"); do
-    if [ "$PID" != $$ ]; then
-        exit 1
-    fi  
-done
+if pidof -o %PPID -x "${0##*/}"; then
+  exit 1
+fi
 
 #Find battery
 if upower -e | grep battery; then
