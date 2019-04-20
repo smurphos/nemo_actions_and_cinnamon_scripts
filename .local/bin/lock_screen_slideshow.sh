@@ -34,10 +34,10 @@ do
   # Screensaver active loop.
   while $(qdbus org.cinnamon.ScreenSaver /org/cinnamon/ScreenSaver org.cinnamon.ScreenSaver.GetActive) == true
   do
-    # If screensaver just activated pause native background slide-show, get user background and either set static
+    # If screensaver just activated check status of native background slide-show, get user background and either set static
     # lock screen background or start slideshow
     if ( ! $ACTIVE ) ; then
-      gsettings set org.cinnamon.desktop.background.slideshow slideshow-paused true
+      NATIVE_SLIDESHOW_STATE=$(gsettings get org.cinnamon.desktop.background.slideshow slideshow-enabled)
       DESK_BACKGROUND=$(gsettings get org.cinnamon.desktop.background picture-uri)
       ACTIVE=true
       if ( ! $SLIDESHOW ) ; then
@@ -58,8 +58,11 @@ do
   done 
   # Set background back to the user background and unpause native slideshow on screensaver de-activation
   if ( $ACTIVE ) ; then
+    if ( $NATIVE_SLIDESHOW_STATE ) ; then
+      gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled "$NATIVE_SLIDESHOW_STATE"
+    else
       gsettings set org.cinnamon.desktop.background picture-uri "$DESK_BACKGROUND"
-      gsettings set org.cinnamon.desktop.background.slideshow slideshow-paused false
-      ACTIVE=false
+    fi
+    ACTIVE=false
   fi
 done
