@@ -1,0 +1,10 @@
+[Nemo Action]
+# An action to create a link .desktop file to the directory on the Desktop
+# Has a link emblem
+Name=Add link to desktop
+Comment=Create a link to #F on the desktop
+Exec=<scripts/send_to_desktop_as_link.sh %F>
+Icon-Name=insert-link-symbolic
+Selection=s
+Extensions=dir;
+EscapeSpaces=true
