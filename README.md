@@ -296,6 +296,36 @@ To install after cloning repo
 
 `apt install zenity`
 
+#### Add to desktop actions
+
+Two actions to quickly create a desktop link to a selected directory.
+Add link to desktop creates a link desktop file with the link emblem on the icon. However these links function slightly differently from a regular symlink as when opened it will open the original target location.
+Add launcher to desktop will result in a plain folder without a link emblem. The function is otherwise identical to add link to desktop
+
+##### Add link to desktop
+
+[add_link_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_link_to_desktop.nemo_action)
+
+[add_link_to_desktop.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/add_link_to_desktop.sh)
+
+To install after cloning repo
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_link_to_desktop.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/scripts`
+
+##### Add launcher to desktop
+
+[add_launcher_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action)
+
+[add_launcher_to_desktop.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/add_launcher_to_desktop.sh)
+
+To install after cloning repo
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/scripts`
+
 #### Bulk rename actions
 
 Both these actions open the bulk rename utility GPrename. One action is for a single folder selection to bulk rename files in that folder.
