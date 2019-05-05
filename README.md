@@ -16,7 +16,7 @@ Some actions in this repo also require an associated shell script. These should 
 
 First clone this repo
 
-`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
+`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_scripts.git`
 
 Having cloned the repo you can either install all of the actions using the commands below or refer to the index of actions to install individual actions.
 
@@ -49,6 +49,8 @@ To install after cloning repo
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/close_windows_in_workspace.nemo_action ~/.local/share/nemo/actions`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/close_all_windows.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/close_windows.sh ~/.local/share/nemo/actions/scripts`
 
@@ -154,6 +156,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/sudo_nano.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/sudo_nano_check.sh ~/.local/share/nemo/actions/scripts`
 
 The xed_admin action and associated script will open the file in the text editor xed elevating privileges with admin:// if necessary.
@@ -165,6 +169,8 @@ The xed_admin action and associated script will open the file in the text editor
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/xed_admin.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/xed_admin_check.sh ~/.local/share/nemo/actions/scripts`
 
@@ -188,6 +194,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/copy_paste_admin.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/copy_paste_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -204,6 +212,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/cut_paste_admin.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/cut_paste_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -219,6 +229,8 @@ Supports single selections only.
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_link_in_target.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_link_in_target.sh ~/.local/share/nemo/actions/scripts`
 
@@ -240,6 +252,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_dir_admin_background.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_dir_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -260,6 +274,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_file_admin_background.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_file_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -276,6 +292,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/delete_admin.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/delete_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -291,6 +309,8 @@ Supports single selections only.
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/rename_admin.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/rename_admin.sh ~/.local/share/nemo/actions/scripts`
 
@@ -312,6 +332,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_link_to_desktop.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/scripts`
 
 ##### Add launcher to desktop
@@ -323,6 +345,8 @@ To install after cloning repo
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/scripts`
 
@@ -379,6 +403,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/print_tree.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/print_tree.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install tree`
@@ -396,6 +422,8 @@ To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/get_random_file.nemo_action ~/.local/share/nemo/actions`
 
+`mkdir ~/.local/share/nemo/actions/scripts`
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/get_random_files.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
@@ -411,6 +439,8 @@ An action and associated shell script to quickly add or remove a ✓ emblem to t
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/toggle_checked.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
 
@@ -434,6 +464,8 @@ Scripts with no issues will be marked with a checked emblem, scripts with warnin
 To install after cloning repo
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/toggle_checked.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
 
