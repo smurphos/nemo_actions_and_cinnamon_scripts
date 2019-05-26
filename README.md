@@ -142,37 +142,51 @@ To install after cloning repo
 
 ### General Actions
 
-#### Open with admin privileges actions
+#### Edit as other user actions
 
-These actions allow you to open text files with a password prompt for elevated privileges if necessary from a regular instance of Nemo. 
+These actions allow you to open text files with a password prompt for elevated privileges if necessary from a regular instance of Nemo. They will all open the file with the specified text-editor using sudoedit to elevate privileges as the owner of the file in question when necessary. The could be root or another user on the system.
 
-The sudo_nano action and associated script will open the file in nano a terminal based text editor, elevating privileges only if necessary. 
+Three versions are supplied, using the CLI text editor Nano, Linux Mint's default GUI text editor Xed and finally the GUI text editor Geany. If you have a different preferred text editor the actions and scripts can easily be modified to suit your needs. The actions invoking a GUI text editor require zenity.
 
-[sudo_nano.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/sudo_nano.nemo_action)
+[nano_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/nano_sudoedit.nemo_action)
 
-[sudo_nano_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/scripts/sudo_nano_check.sh)
-
-To install after cloning repo
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/sudo_nano.nemo_action ~/.local/share/nemo/actions`
-
-`mkdir ~/.local/share/nemo/actions/scripts`
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/sudo_nano_check.sh ~/.local/share/nemo/actions/scripts`
-
-The xed_admin action and associated script will open the file in the text editor xed elevating privileges with admin:// if necessary.
-
-[xed_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/xed_admin.nemo_action)
-
-[xed_admin_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/xed_admin_check.sh)
+[nano_sudoedit_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/scripts/nano_sudoedit_check.sh)
 
 To install after cloning repo
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/xed_admin.nemo_action ~/.local/share/nemo/actions`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/nano_sudoedit.nemo_action ~/.local/share/nemo/actions`
 
 `mkdir ~/.local/share/nemo/actions/scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/xed_admin_check.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/nano_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+
+[xed_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/xed_sudoedit.nemo_action)
+
+[xed_sudoedit_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/xed_sudoedit_check.sh)
+
+To install after cloning repo
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/xed_sudoedit.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/xed_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+
+`apt install zenity`
+
+[geany_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/geany_sudoedit.nemo_action)
+
+[geany_sudoedit_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/geany_sudoedit_check.sh)
+
+To install after cloning repo
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/geany_sudoedit.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/geany_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+
+`apt install zenity`
 
 #### File actions as admin
 
@@ -180,41 +194,41 @@ These actions and their associated shell scripts allow the user to undertake a r
 
 They will all request password authentication if elevated privileges are necessary to complete the action.
 
-All require zenity - `apt install zenity`
+All require zenity.
 
-##### Copy/paste (Admin)
+##### Copy to (Admin)
 
 Supports single and multiple selections.
 
-[copy_paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/copy_paste_admin.nemo_action)
+[copy_to_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/copy_to_admin.nemo_action)
 
-[copy_paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/copy_paste_admin.sh)
+[copy_to_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/copy_to_admin.sh)
 
 To install after cloning repo
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/copy_paste_admin.nemo_action ~/.local/share/nemo/actions`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/copy_to_admin.nemo_action ~/.local/share/nemo/actions`
 
 `mkdir ~/.local/share/nemo/actions/scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/copy_paste_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/copy_to_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
 
-##### Cut/paste (Admin)
+##### Move to (Admin)
 
 Supports single and multiple selections
 
-[cut_paste_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/cut_paste_admin.nemo_action)
+[move_to_admin.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/move_to_admin.nemo_action)
 
-[cut_paste_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/cut_paste_admin.sh)
+[move_to_admin.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/move_to_admin.sh)
 
 To install after cloning repo
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/cut_paste_admin.nemo_action ~/.local/share/nemo/actions`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/move_to_admin.nemo_action ~/.local/share/nemo/actions`
 
 `mkdir ~/.local/share/nemo/actions/scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/cut_paste_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/move_to_admin.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
 
