@@ -9,13 +9,14 @@ if [ -e "$1/$NAME" ]; then
   zenity --info --width=250 --text="Error creating directory. $1/$NAME already exists. Try again."
   exit 1
 fi
-#Is destination writeable?
-if [ ! -w "$1" ] ; then
+#Is destination under ownership of user?
+DESTOWNER=$(stat -c %U "$1")
+if [ "$DESTOWNER" != "$USER" ] ; then
   PASS=$(zenity --password --title="Authenticate to create directory.")
   if [ -z "$PASS" ]; then
    exit 1
   fi
-  echo -e "$PASS" | sudo -S mkdir "$1/$NAME"
+  echo -e "$PASS" | sudo -S -u "$DESTOWNER" mkdir "$1/$NAME"
 else
   mkdir "$1/$NAME"
 fi

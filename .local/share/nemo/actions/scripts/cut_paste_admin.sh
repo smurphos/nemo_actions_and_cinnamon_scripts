@@ -4,6 +4,8 @@ DEST=$(zenity --file-selection --directory --title "Select the directory to past
 if [ -z "$DEST" ]; then
   exit 1; 
 fi
+#Get ownership of $DEST
+DESTOWNER=$(stat -c %U "$DEST")
 for i in "$@"; do
 #Check not overwriting an existing file or directory
   FILE=$(basename "$i")
@@ -15,15 +17,15 @@ for i in "$@"; do
   else
     NAME=$FILE
   fi
-#Is destination writeable?
-  if [ ! -w "$DEST" ] ; then
+#Is destination under ownership of user?
+if [ "$DESTOWNER" != "$USER" ] ; then
     if [ -z "$PASS" ]; then
       PASS=$(zenity --password --title="Authenticate to paste.")
     fi
     if [ -z "$PASS" ]; then
      exit 1
     fi
-    echo -e "$PASS" | sudo -S mv "$i" "$DEST/$NAME"
+    echo -e "$PASS" | sudo -S -u "$DESTOWNER" mv "$i" "$DEST/$NAME"
   else
     mv "$i" "$DEST/$NAME"
   fi
