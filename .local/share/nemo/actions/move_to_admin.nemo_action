@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Move to (Admin)
+Comment=Move #F to a destination of your choice elevating privileges if necessary.
+Exec=<scripts/move_to_admin.sh %F>
+Icon-Name=edit-cut-symbolic
+Selection=notnone
+Extensions=any;
+EscapeSpaces=true
+Dependencies=zenity;
