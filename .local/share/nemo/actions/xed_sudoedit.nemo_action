@@ -1,8 +1,8 @@
 [Nemo Action]
 
-Name=Edit with (sudo) nano
-Comment=Open %F with nano escalating privileges if necessary
-Exec=<scripts/sudo_nano_check.sh %F>
+Name=Xed (sudoedit)
+Comment=Open %F with xed opening as different user when needed via sudoedit.
+Exec=<scripts/xed_sudoedit_check.sh %F>
 Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
@@ -10,7 +10,7 @@ Selection=s
 Mimetypes=text/plain;text/css;text/english;text/html;text/x-apt-sources-list;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-diff;text/x-dsrc;text/x-java;text/x-makefile;text/x-moc;text/x-pascal;text/x-perl;text/x-python;text/x-sql;text/x-tcl;text/x-tex;
 #Separator= 
 #Quote=
-Dependencies=sudo;nano;
+Dependencies=sudoedit;xed;
 #Conditions=
 EscapeSpaces=true
-Terminal=true
+Terminal=false

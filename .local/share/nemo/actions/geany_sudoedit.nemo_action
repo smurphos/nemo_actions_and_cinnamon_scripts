@@ -1,8 +1,8 @@
 [Nemo Action]
-# Intended to facilitate opening root owned files with the default GUI text editor.
-Name=Edit with xed (admin://)
-Comment=Open %F in xed escalating privileges if necessary 
-Exec=<scripts/xed_admin_check.sh %F>
+
+Name=Geany (sudoedit)
+Comment=Open %F with geany, opening as different user when needed via sudoedit.
+Exec=<scripts/geany_sudoedit_check.sh %F>
 Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s
@@ -10,7 +10,7 @@ Selection=s
 Mimetypes=text/plain;text/css;text/english;text/html;text/x-apt-sources-list;text/x-c;text/x-c++;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-diff;text/x-dsrc;text/x-java;text/x-makefile;text/x-moc;text/x-pascal;text/x-perl;text/x-python;text/x-sql;text/x-tcl;text/x-tex;
 #Separator= 
 #Quote=
-Dependencies=xed;
+Dependencies=sudoedit;geany;
 #Conditions=
 EscapeSpaces=true
-#Terminal=
+Terminal=false
