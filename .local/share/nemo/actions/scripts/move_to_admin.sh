@@ -1,6 +1,6 @@
 #!/bin/bash
 #Get destination directory
-DEST=$(zenity --file-selection --directory --title "Select the directory to paste into.")
+DEST=$(zenity --file-selection --directory --title "Select the directory to move to.")
 if [ -z "$DEST" ]; then
   exit 1; 
 fi
@@ -10,9 +10,13 @@ for i in "$@"; do
 #Check not overwriting an existing file or directory
   FILE=$(basename "$i")
   if [ -e "$DEST/$FILE" ]; then
-    NAME=$(zenity --entry --width=250 --title "File name" --text="$DEST/$FILE already exists. Please select an alternative file name" --entry-text="$FILE(Copy)")
-    if [ -z "$NAME" ]; then
-     exit 1
+    if ! zenity --question --icon-name=dialog-warning --width=250 --default-cancel --title="File conflict" --text="$DEST/$FILE already exists. Overwrite existing?"; then
+      NAME=$(zenity --entry --width=250 --title "File name" --text="Select an alternative file name or press cancel to abort." --entry-text="$FILE(Copy)")
+      if [ -z "$NAME" ]; then
+       exit 1
+      fi
+    else
+      NAME=$FILE
     fi
   else
     NAME=$FILE
