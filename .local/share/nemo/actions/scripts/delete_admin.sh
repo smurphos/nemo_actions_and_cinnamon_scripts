@@ -1,29 +1,43 @@
 #!/bin/bash
+CONFIRM=false
+SUCCESSSTRING="Successfully deleted:"
 for i in "$@"; do
 #Is directory writeable?
   if [ ! -w "$(dirname "$i")" ]; then
     if [ -z "$PASS" ]; then
-    PASS=$(zenity --password --title="Authenticate to delete.")
+    PASS=$(zenity --password --title="Authenticate to delete")
     fi
     if [ -z "$PASS" ]; then
       exit 1
     fi
-    if zenity --question --width=250 --default-cancel --title="Please confirm file deletion." --text="This action cannot be undone! Delete $i?"; then
-      echo -e "$PASS" | sudo -S rm -r "$i"
+    if ( ! $CONFIRM ); then
+      if zenity --question --icon-name=dialog-warning --width=250 --default-cancel --title="Please confirm deletion" --text="This action cannot be undone!\n\nDelete $# files/directories?"; then
+        CONFIRM=true
+        echo -e "$PASS" | sudo -S rm -r "$i"
+      else
+        exit 1
+      fi
     else
-      exit 1
+      echo -e "$PASS" | sudo -S rm -r "$i"
     fi
   else
-    if zenity --question --width=250 --default-cancel --title="Please confirm file deletion." --text="This action cannot be undone! Delete $i?"; then
-      rm -r "$i"
+    if ( ! $CONFIRM ); then
+      if zenity --question --icon-name=dialog-warning --width=250 --default-cancel --title="Please confirm deletion" --text="This action cannot be undone!\n\nDelete $# files/directories?"; then
+        CONFIRM=true
+        rm -r "$i"
+      else
+        exit 1
+      fi
     else
-      exit 1
-    fi
+      rm -r "$i"
+    fi 
   fi
   if [ $? = 1 ]; then
-    zenity --info --width=250 --text="Error deleting $i. Try again."
+    zenity --warning --width=250 --text="Error deleting $i\n\nOperation aborted."
     exit 1
   else
-    notify-send --expire-time=200000 "Successfully deleted $i"
+    SUCCESSSTRING+="
+    $i"
   fi
 done
+    notify-send "$SUCCESSSTRING"
