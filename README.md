@@ -524,7 +524,7 @@ It is intended to be run on user login as a startup application. Requires qdbus 
 
 [lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/lock_screen_slideshow.sh)
 
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
 
 `mkdir ~/.local/bin`
 
@@ -547,7 +547,7 @@ It is intended to be run from the root crontab.
 
 [login_screen_random_background.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/opt/login_screen_random_background.sh)
 
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
 
 `sudo cp -r ./nemo_actions_and_cinnamon_scripts/opt/login_screen_random_background.sh /opt`
 
@@ -573,7 +573,7 @@ This script allows the user to different backgrounds for each Cinnamon workspace
 
 [workspace_background_switcher.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/workspace_background_switcher.sh)
 
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
 
 `mkdir ~/.local/bin`
 
@@ -592,7 +592,7 @@ The effect is independent of the users theme and can be used with any GTK theme.
 
 [opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/opacify_windows.sh)
 
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
 
 `mkdir ~/.local/bin`
 
@@ -613,7 +613,7 @@ It is intended to be run on user login as a startup application.
 
 [battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/battery_mon.sh)
 
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
 
 `mkdir ~/.local/bin`
 
@@ -635,7 +635,7 @@ This small gtk.css file over-rides is intended to improve visibility of desktop 
 
 First clone this repo if you haven't already.
 
-`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_script`
+`git clone https://github.com/smurphos/nemo_actions_and_cinnamon_scripts.git`
 
 To install the gtk.css over-ride file
 
