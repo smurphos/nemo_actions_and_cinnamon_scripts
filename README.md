@@ -492,18 +492,23 @@ This is a small selection of feature scripts that add new features or improve ex
 ## Cinnamon Scripts Installation
 
 First clone this repo if you haven't already.
+
 `git clone https://github.com/smurphos/nemo_actions_and_cinnamon_scripts.git`
 
 Having cloned the repo you can either install all of the scripts using the commands below or refer to the index of scripts to install individual scripts.
 
 To install all of the cinnamon scripts
+
 `cp -rv ./nemo_actions_and_cinnamon_scripts/.local/bin/ ~/.local`
+
 `cp -rv ./nemo_actions_and_cinnamon_scripts/opt/ /opt`
 
 To install autostart entries for relevant scripts
+
 `cp -rv ./nemo_actions_and_cinnamon_scripts/.config/autostart/ ~/.config`
 
 Install dependencies required by the scripts
+
 `apt install zenity xdotool wmctrl`
 
 See the scripts index for any other script specific setup recommendations.
