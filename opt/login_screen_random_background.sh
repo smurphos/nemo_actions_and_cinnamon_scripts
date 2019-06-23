@@ -1,12 +1,12 @@
 #!/bin/dash
 # Script to randomly set slick-greeter's (Mint's Login screen) background from pictures in a directory
 
-# Save as ~/bin/login_screen_random_background.sh and make executable
+# Save as /opt/login_screen_random_background.sh and make executable
 # Run sudo crontab -e
 # Add the lines 
 
-# @reboot /home/yourusername/bin/login_screen_random_background.sh
-# 0,30 * * * * /home/yourusername/bin/login_screen_random_background.sh
+# @reboot /opt/login_screen_random_background.sh
+# 0,30 * * * * /opt/login_screen_random_background.sh
 
 # Ctrl-O and then Ctrl-X to save the crontab.
 # The login-screen background will then update on boot and every half an hour.
