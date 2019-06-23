@@ -501,7 +501,7 @@ To install all of the cinnamon scripts
 
 `cp -rv ./nemo_actions_and_cinnamon_scripts/.local/bin/ ~/.local`
 
-`cp -rv ./nemo_actions_and_cinnamon_scripts/opt/ /opt`
+`sudo cp -r ./nemo_actions_and_cinnamon_scripts/opt/login_screen_random_background.sh /opt`
 
 To install autostart entries for relevant scripts
 
@@ -549,7 +549,7 @@ It is intended to be run from the root crontab.
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/opt/login_screen_random_background.sh /opt`
+`sudo cp -r ./nemo_actions_and_cinnamon_scripts/opt/login_screen_random_background.sh /opt`
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
