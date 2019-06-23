@@ -553,7 +553,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
-`xdg-open /opt/login_screen_random_background.sh`
+`sudoedit /opt/login_screen_random_background.sh`
 
 Login Screen Random Background is intended to be run from the root crontab. To set up run
 
