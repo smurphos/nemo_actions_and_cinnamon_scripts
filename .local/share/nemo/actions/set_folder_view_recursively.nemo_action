@@ -1,0 +1,10 @@
+[Nemo Action]
+Name=Set folder view recursively
+Comment=Sets the view-type and zoom level for %F and sub-directories
+Exec=<scripts/set_folder_view_recursively.sh %F>
+Icon-Name=folder-symbolic
+Selection=s
+Extensions=dir;
+EscapeSpaces=true
+Dependencies=zenity;gio;wmctrl;
+

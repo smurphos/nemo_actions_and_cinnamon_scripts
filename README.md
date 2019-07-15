@@ -402,6 +402,24 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
 
+#### Set folder view recursively
+
+This action allows the user to set default folder view (list, compact or icon) and zoom level recursively to a directory and it's sub-directories.
+
+Requires zenity, wmctrl, and gio. Mint users should be aware that gio is only available in Mint 19 and later.
+
+[set_folder_view_recursively.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/set_folder_view_recursively.nemo_action)
+
+[set_folder_view_recursively.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/set_folder_view_recursively.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/set_folder_view_recursively.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/set_folder_view_recursively.sh ~/.local/share/nemo/actions/scripts`
+
+`apt install zenity wmctrl`
+
 #### Media info
 
 Shows information about media files in a separate window using mediainfo-gui - .
