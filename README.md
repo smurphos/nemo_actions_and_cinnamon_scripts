@@ -381,7 +381,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `apt install gprename`
 
-#### Apply custom emblems
+#### Apply custom emblems
 
 This action allows the user to create and set custom emblems derived from image files, album art or video thumbnails to files and directories.
 For directories there is an option to use a random emblem generated from the directory contents and it can be run recursively on the selected directory and it's sub-directories.
@@ -402,7 +402,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
 
-#### Set folder view recursively
+#### Set folder view recursively
 
 This action allows the user to set default folder view (list, compact or icon) and zoom level recursively to a directory and it's sub-directories.
 
