@@ -150,7 +150,7 @@ Three versions are supplied, using the CLI text editor Nano, Linux Mint's defaul
 
 [nano_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/nano_sudoedit.nemo_action)
 
-[nano_sudoedit_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/nemo_actions/general_actions/scripts/nano_sudoedit_check.sh)
+[nano_sudoedit_check.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/nano_sudoedit_check.sh)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
