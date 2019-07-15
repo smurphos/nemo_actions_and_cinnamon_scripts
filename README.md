@@ -381,6 +381,27 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `apt install gprename`
 
+#### Apply custom emblems
+
+This action allows the user to create and set custom emblems derived from image files, album art or video thumbnails to files and directories.
+For directories there is an option to use a random emblem generated from the directory contents and it can be run recursively on the selected directory and it's sub-directories.
+
+Requires zenity, wmctrl, imagemagick and either xplayer or ffmpeg and ffmpegthumbnailer to be installed.
+
+[apply_custom_emblem.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/apply_custom_emblem.nemo_action)
+
+[apply_custom_emblem.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/apply_custom_emblem.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/apply_custom_emblem.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/apply_custom_emblem.sh ~/.local/share/nemo/actions/scripts`
+
+`apt install zenity wmctrl imagemagick`
+
+Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
+
 #### Media info
 
 Shows information about media files in a separate window using mediainfo-gui - .
