@@ -43,7 +43,7 @@ else
 fi
 
 #Random image or picker?
-if [ -f "$1" ] || zenity --question --icon-name=dialog-question --no-wrap --title="Use file selection dialogue?" --text="\nChoose YES to select an image to use as emblem for $1\n\nChoose NO to use a random emblem for $1"; then
+if [ -f "$1" ] || ANSWER=$(zenity --question --icon-name=dialog-question  --extra-button="Cancel" --no-wrap --title="Use file selection dialogue?" --text="\nChoose YES to select an image to use as emblem for $1\n\nChoose NO to use a random emblem for $1"); then
   #Picker
   if [ -d "$1" ]; then
 	SOURCE_DIR="$1"
@@ -55,6 +55,8 @@ if [ -f "$1" ] || zenity --question --icon-name=dialog-question --no-wrap --titl
    exit 1; 
   fi
   create_emblem "$1" "$SOURCE_PIC" "$THUMBNAILER"
+elif [ "$ANSWER" == "Cancel" ]; then
+  exit 1;
 else
   #Random image select a maxdepth
   DEPTH=$(zenity --entry --title="Select maximum depth." --entry-text="1" --text="Confirm the maximum number of sub directory levels to search for images\n\nThe value should be greater than 0\n")
@@ -66,7 +68,7 @@ else
    exit 1
   fi
   #Apply random emblems to sub-directories recursively?
-  if zenity --question --icon-name=dialog-question --no-wrap --title="Apply emblems recursively?" --text="\nChoose YES to apply random emblems to $1 and it's sub-directories\n\nChoose NO to apply a random emblem to $1 only"; then 
+  if ANSWER=$(zenity --question --icon-name=dialog-question --extra-button="Cancel" --no-wrap --title="Apply emblems recursively?" --text="\nChoose YES to apply random emblems to $1 and it's sub-directories\n\nChoose NO to apply a random emblem to $1 only"); then
     COUNT=0
     PROGRESS=0
     MAX=$(find -L "$1" -type d | wc -l)
@@ -81,6 +83,8 @@ else
     echo "$PROGRESS"
     echo "# $COUNT of $MAX : $PROGRESS% Processing: $(basename "$DIRS")"
     done > >(zenity --progress --auto-close --percentage=0 --time-remaining --text="Applying emblems to $1 and sub-directories                                                                              ")
+  elif [ "$ANSWER" == "Cancel" ]; then
+    exit 1;
   else
      SOURCE_PIC=$(find -L "$1" -maxdepth "$DEPTH" -iname '*.jp*g' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.tif*' -o -iname '*.mp*' -o -iname '*.mkv' -o -iname '*.avi' -o -iname '*.mov' | shuf -n1)
     if [ -z "$SOURCE_PIC" ]; then
