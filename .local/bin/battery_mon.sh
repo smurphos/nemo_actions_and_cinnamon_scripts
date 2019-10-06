@@ -40,7 +40,7 @@ gsettings set org.cinnamon.settings-daemon.plugins.power percentage-action "$CRI
 # Get Critical Battery Action from Gsettings
 
 CRIT_ACTION=$(gsettings get org.cinnamon.settings-daemon.plugins.power critical-battery-action)
-if [ "$CRIT_ACTION" == "'suspend'" ] && busctl call org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager CanHybridSleep | grep yes; then
+if [ "$CRIT_ACTION" == "'suspend'" ] && gsettings get org.cinnamon.SessionManager prefer-hybrid-sleep; then
     CRIT_ACTION="'hybrid-sleep'"
 fi
 
