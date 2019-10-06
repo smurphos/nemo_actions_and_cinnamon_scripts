@@ -648,7 +648,7 @@ Optionally review the script to amend end user editable variables to suit your p
 #### Battery Event Warnings
 
 This script uses zenity - `apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
-It is intended to be run on user login as a startup application.
+It is intended to be run on user login as a startup application. Please note the script modifies Cinnamon's default thresholds for Low & Critical battery events and actions. Please review the script if you want to set these thresholds to your preference.
 
 [battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/battery_mon.sh)
 
@@ -661,6 +661,10 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/battery_mon.desktop ~/.config/autostart`
 
 `apt install zenity`
+
+Optionally review the script to amend end user editable variables to suit your preferences.
+
+`xdg-open ~/.local/bin/battery_mon.sh`
 
 # Miscellaneous tweaks
 
