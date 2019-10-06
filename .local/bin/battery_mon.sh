@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/bash
 
 # Script to send persistent notification on low battery events
 # Depends on zenity - apt install zenity
@@ -40,6 +40,9 @@ gsettings set org.cinnamon.settings-daemon.plugins.power percentage-action "$CRI
 # Get Critical Battery Action from Gsettings
 
 CRIT_ACTION=$(gsettings get org.cinnamon.settings-daemon.plugins.power critical-battery-action)
+if [ "$CRIT_ACTION" == "'suspend'" ] && busctl call org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager CanHybridSleep | grep yes; then
+    CRIT_ACTION="'hybrid-sleep'"
+fi
 
 # Start loop
 while true; do
