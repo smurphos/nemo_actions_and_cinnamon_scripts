@@ -1,6 +1,6 @@
 [Nemo Action]
 # Use GPrename (apt install gprename) to bulk rename contents of target directory
-Name=Bulk rename contents
+Name=_Bulk Rename
 Comment=Open GPrename in %F
 Exec=gprename %F
 Icon-Name=document-edit-symbolic

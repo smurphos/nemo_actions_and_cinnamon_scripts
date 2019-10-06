@@ -1,7 +1,7 @@
 [Nemo Action]
 # An action to create a launcher to the directory on the Desktop
 # Doesn't have a link emblem
-Name=Add launcher to desktop
+Name=Add _Launcher To Desktop
 Comment=Create a launcher to #F on the Desktop
 Exec=<scripts/add_launcher_to_desktop.sh %F>
 Icon-Name=insert-object-symbolic

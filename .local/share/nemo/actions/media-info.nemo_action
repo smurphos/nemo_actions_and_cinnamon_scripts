@@ -1,6 +1,6 @@
 [Nemo Action]
 # Requires mediainfo-gui - apt install mediainfo-gui
-Name=Media properties
+Name=Media _Properties
 Comment=Open %F with mediainfo-gui
 Exec=mediainfo-gui %F
 Icon-Name=applications-multimedia-symbolic

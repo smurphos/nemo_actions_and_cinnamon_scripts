@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Toggle Desktop Slideshow
+Name=_Toggle Desktop Slideshow
 Comment=Toggle the desktop wallpaper slidehow on/off
 Exec= sh -c 'if gsettings get org.cinnamon.desktop.background.slideshow slideshow-enabled | grep "false"; then gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled true; else gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled false; fi'
 Icon-Name=preferences-desktop-wallpaper-symbolic

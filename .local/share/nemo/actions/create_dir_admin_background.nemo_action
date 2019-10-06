@@ -2,7 +2,7 @@
 # An action to create a new directory on right click on empty space in nemo.
 # Will request password authentication if elevated privileges are needed to complete the action.
 # Requires companion script create_dir_admin.sh
-Name=Create directory (Admin)
+Name=Create _Directory (Admin)
 Comment=Create a directory in %F elevating privileges in necessary
 Exec=<scripts/create_dir_admin.sh %F>
 Selection=none

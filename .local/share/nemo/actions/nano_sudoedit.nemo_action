@@ -1,6 +1,6 @@
 [Nemo Action]
 
-Name=Nano (sudoedit)
+Name=_Nano (Sudoedit)
 Comment=Open %F with nano opening as different user when needed via sudoedit.
 Exec=<scripts/nano_sudoedit_check.sh %F>
 Icon-Name=text-editor-symbolic

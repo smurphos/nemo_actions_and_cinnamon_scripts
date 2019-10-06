@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Create new workspace
+Name=Create _New Workspace
 Comment=Create a new workspace and move to it
 Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.JumpToNewWorkspace >/dev/null'
 Selection=None

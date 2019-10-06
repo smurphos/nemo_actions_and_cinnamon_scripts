@@ -1,6 +1,6 @@
 [Nemo Action]
 # Any action
-Name=Print tree
+Name=_Print Tree
 Comment=Print tree output for #F to a html file and display in default browser
 Exec=<scripts/print_tree.sh %F>
 Icon-Name=view-list-symbolic

@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Touch file
+Name=_Touch File
 Comment=Touch file to update modified date
 Exec=touch %F
 Selection=notnone

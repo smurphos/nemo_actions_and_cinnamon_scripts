@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Shutdown now 
+Name=_Poweroff Now 
 Comment=Shutdown the system immediately
 Exec=systemctl poweroff
 Selection=None

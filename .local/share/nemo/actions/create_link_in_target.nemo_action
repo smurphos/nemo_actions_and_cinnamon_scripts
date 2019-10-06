@@ -1,7 +1,7 @@
 [Nemo Action]
 # An action to create a link to the file / directory in another directory.
 # Will request password authentication if elevated privileges are needed to complete the action.
-Name=Create link to (Admin)
+Name=Create _Link (Admin)
 Comment=Create a link to #F in a user selected destination directory
 Exec=<scripts/create_link_in_target.sh %F>
 Icon-Name=insert-link-symbolic

@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Logout now
+Name=_Logout Now
 Comment=Logout of the session immediately
 Exec=cinnamon-session-quit --logout --no-prompt
 Selection=None

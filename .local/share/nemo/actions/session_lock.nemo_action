@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Lock session now
+Name=_Lock Session Now
 Comment=Lock the session and activate screensaver
 Exec=cinnamon-screensaver-command -l
 Selection=None

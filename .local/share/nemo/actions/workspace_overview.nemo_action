@@ -1,6 +1,6 @@
 [Nemo Action]
 # View workspace overview.
-Name=Workspace overview (Expo)
+Name=Workspace Overview (_Expo)
 Comment=Open worksapce overview to manage workspaces
 Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.ShowExpo >/dev/null'
 Selection=None

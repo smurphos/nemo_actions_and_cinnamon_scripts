@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Suspend now
+Name=_Suspend Now
 Comment=Suspend the system
 Exec=systemctl suspend
 Selection=None

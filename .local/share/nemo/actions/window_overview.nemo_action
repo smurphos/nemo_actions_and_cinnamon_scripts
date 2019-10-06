@@ -1,6 +1,6 @@
 [Nemo Action]
 # View windows overview
-Name=Window overview (Scale)
+Name=Window Overview (_Scale)
 Comment=Open overview to add, remove, or organize windows
 Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.ShowOverview >/dev/null'
 Selection=None

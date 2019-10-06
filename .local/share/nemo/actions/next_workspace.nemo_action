@@ -2,7 +2,7 @@
 # Requires xdotool - apt install xdotool
 # Assumes default keyboard shortcut for next workspace is unchanged
 
-Name=Next workspace
+Name=_Next Workspace
 Comment=Goto to next workspace
 Exec=xdotool key ctrl+alt+Right
 Selection=None

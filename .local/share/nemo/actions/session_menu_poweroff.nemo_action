@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Shutdown dialogue
+Name=_Poweroff Dialogue
 Comment=Show the shutdown session dialogue
 Exec=cinnamon-session-quit --power-off
 Selection=None

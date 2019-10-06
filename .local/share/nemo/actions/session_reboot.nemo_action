@@ -1,5 +1,5 @@
 [Nemo Action]
-Name=Reboot now
+Name=_Reboot Now
 Comment=Reboot the system immediately
 Exec=systemctl reboot
 Selection=None

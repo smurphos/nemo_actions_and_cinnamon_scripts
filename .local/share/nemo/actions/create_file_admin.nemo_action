@@ -2,7 +2,7 @@
 # An action to create a new file on right click on a directory.
 # Will request password authentication if elevated privileges are needed to complete the action.
 # Requires companion script create_file_admin.sh
-Name=Create file (Admin)
+Name=Create _File (Admin)
 Comment=Create a file in %F elevating privileges in necessary
 Exec=<scripts/create_file_admin.sh %F>
 Selection=s
