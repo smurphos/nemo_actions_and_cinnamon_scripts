@@ -18,9 +18,9 @@ function create_emblem {
     if [[ $3 == "xplayer-video-thumbnailer" ]]; then
       xplayer-video-thumbnailer -s 1024 "$2" /tmp/thumbnail.png
     else
-	  if file "$2" | grep -i ".mp3"; then
-	    ffmpeg -y -i "$2" /tmp/thumbnail.png
-	  else
+      if file "$2" | grep -i ".mp3"; then
+        ffmpeg -y -i "$2" /tmp/thumbnail.png
+      else
         ffmpegthumbnailer -s 0 -i "$2" -o /tmp/thumbnail.png
       fi
     fi
@@ -38,21 +38,21 @@ if command -v xplayer-video-thumbnailer; then
 elif command -v ffmpegthumbnailer && command -v ffmpeg; then
   THUMBNAILER="ffmpegthumbnailer"
 else
-   zenity --info --width=250 --text="No supported thumb-nailer available. Please install xplayer or ffmpegthumbnailer / ffmpeg";
-   exit 1 
+  zenity --info --width=250 --text="No supported thumb-nailer available. Please install xplayer or ffmpegthumbnailer / ffmpeg";
+  exit 1
 fi
 
 #Random image or picker?
 if [ -f "$1" ] || ANSWER=$(zenity --question --icon-name=dialog-question  --extra-button="Cancel" --no-wrap --title="Use file selection dialogue?" --text="\nChoose YES to select an image to use as emblem for $1\n\nChoose NO to use a random emblem for $1"); then
   #Picker
   if [ -d "$1" ]; then
-	SOURCE_DIR="$1"
+  SOURCE_DIR="$1"
   else
-	SOURCE_DIR=$(xdg-user-dir PICTURES)
+  SOURCE_DIR=$(xdg-user-dir PICTURES)
   fi
   SOURCE_PIC=$(zenity --file-selection --filename="$SOURCE_DIR"/ --file-filter='Supported media (jpg/png/gif/tiff/mp3/mp4/mkv/avi/mov) | *.jp*g *JP*G *.png *.PNG *.gif *.GIF *.tif* *.TIF^ *.mp* *.MP* *.mkv *.MKV *.avi *.AVI *.mov *.MOV' --file-filter='All files | *' --title "Select soruce file")
   if [ -z "$SOURCE_PIC" ]; then
-   exit 1; 
+   exit 1;
   fi
   create_emblem "$1" "$SOURCE_PIC" "$THUMBNAILER"
 elif [ "$ANSWER" == "Cancel" ]; then
@@ -61,7 +61,7 @@ else
   #Random image select a maxdepth
   DEPTH=$(zenity --entry --title="Select maximum depth." --entry-text="1" --text="Confirm the maximum number of sub directory levels to search for images\n\nThe value should be greater than 0\n")
   if [ -z "$DEPTH" ]; then
-   exit 1; 
+   exit 1;
   fi
   if [[ ! $DEPTH =~ ^[0-9]+$ ]] || [[ $DEPTH = "0" ]]; then
    zenity --info --width=250 --text="Depth must be an integer greater than 0. Aborting operation. Please try again.";
@@ -89,7 +89,7 @@ else
      SOURCE_PIC=$(find -L "$1" -maxdepth "$DEPTH" -iname '*.jp*g' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.tif*' -o -iname '*.mp*' -o -iname '*.mkv' -o -iname '*.avi' -o -iname '*.mov' | shuf -n1)
     if [ -z "$SOURCE_PIC" ]; then
       zenity --error --width=250 --text="Could not apply a random custom emblem\n\nNo supported file type found in directory"
-      exit 1; 
+      exit 1;
     fi
     create_emblem "$1" "$SOURCE_PIC" "$THUMBNAILER"
   fi
