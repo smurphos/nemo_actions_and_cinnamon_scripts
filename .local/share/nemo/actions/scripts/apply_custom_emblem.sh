@@ -102,7 +102,7 @@ nemo-desktop &
 # Todo - find a reliable way to get the path of all open nemo windows / tabs and restart all of them.
 if wmctrl -lx | grep nemo.Nemo; then
   nemo -q
-  nemo "$(dirname "$1")"
+  nemo "$(dirname "$1")" &
 else
   nemo -q
 fi
