@@ -347,7 +347,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `mkdir ~/.local/share/nemo/actions/scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/disk_usage..sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/disk_usage.sh ~/.local/share/nemo/actions/scripts`
 
 `apt install zenity`
 
