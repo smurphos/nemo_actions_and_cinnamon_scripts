@@ -337,9 +337,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 Select single or multiple files / directories to be presented with a zenity window showing the total disk usage of the selection.
 Based on an action by Linux Mint forum member [sadhu](https://forums.linuxmint.com/memberlist.php?mode=viewprofile&u=129286)
 
-[disk_usage.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/disk_usage..nemo_action)
+[disk_usage.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/disk_usage.nemo_action)
 
-[disk_usage.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/disk_usage..sh)
+[disk_usage.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/disk_usage.sh)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
