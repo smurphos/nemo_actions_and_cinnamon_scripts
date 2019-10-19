@@ -11,7 +11,8 @@ function set_metadata {
     MAX=$(find -L "$1" -type d | wc -l)
     INCREMENT=$(echo "scale=2;$MAX / 100" | bc)
     find -L "$1" -type d -print0 | while IFS= read -r -d $'\0' DIRS; do
-    gio set "$DIRS" metadata::nemo-default-view "$2" \; -exec gio set "$DIRS" metadata::nemo-icon-view-zoom-level "$3" \;
+    gio set "$DIRS" metadata::nemo-default-view "$2"
+    gio set "$DIRS" metadata::nemo-icon-view-zoom-level "$3"
     ((COUNT++))
     PROGRESS=$(echo "$COUNT / $INCREMENT" | bc)
     echo "$PROGRESS"
@@ -52,8 +53,7 @@ esac
 # Restart Nemo to apply changes.
 if wmctrl -lx | grep nemo.Nemo; then
   nemo -q
-  nemo "$(dirname "$1")"
+  nemo "$(dirname "$1")" &
 else
   nemo -q
 fi
-exit
