@@ -6,7 +6,7 @@ Also included is a [GTK over-ride](https://github.com/smurphos/nemo_actions_and_
 
 # Nemo Actions
 
-Nemo actions add additional context menu items to the right click context menu in the Nemo file manager and on the Cinnamon desktop.
+Nemo actions add additional context menu items to the right click menu in the Nemo file manager and on the Cinnamon desktop.
 
 An action can be added to Nemo by saving it's definition file with the file extension `.nemo_action` in `~/.local/share/nemo/actions`
 
@@ -26,7 +26,9 @@ To install all of the nemo actions
 
 Install other dependencies used by the actions
 
-`apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree`
+`apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree imagemagick`
+
+Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
 
 Open Nemo > Preferences > Plugins and review any actions you wish to disable.
 
