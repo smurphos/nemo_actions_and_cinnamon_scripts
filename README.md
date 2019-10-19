@@ -332,6 +332,25 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `apt install zenity`
 
+#### Disk Usage action
+
+Select single or multiple files / directories to be presented with a zenity window showing the total disk usage of the selection.
+Based on an action by Linux Mint forum member [sadhu](https://forums.linuxmint.com/memberlist.php?mode=viewprofile&u=129286)
+
+[disk_usage.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/disk_usage..nemo_action)
+
+[disk_usage.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/disk_usage..sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/disk_usage.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/disk_usage..sh ~/.local/share/nemo/actions/scripts`
+
+`apt install zenity`
+
 #### Add to desktop actions
 
 Two actions to quickly create a desktop link to a selected directory.
