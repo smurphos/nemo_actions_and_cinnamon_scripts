@@ -14,7 +14,11 @@ Some actions in this repo also require an associated shell script. These should 
 
 ## Nemo Action installation
 
-First clone this repo
+First install git
+
+`apt install git`
+
+Then clone this repo
 
 `git clone https://github.com/smurphos/nemo_actions_and_cinnamon_scripts.git`
 
@@ -31,6 +35,16 @@ Install other dependencies used by the actions
 Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
 
 Open Nemo > Preferences > Plugins and review any actions you wish to disable.
+
+## Nemo Action updating
+
+In a terminal navigate to the `nemo_actions_and_cinnamon_scripts` folder created when you originally cloned the repo
+
+e.g `cd nemo_actions_and_cinnamon_scripts`
+
+Once in the correct folder update your local copy with the latest commits, before reinstalling your actions.
+
+`git pull origin; cd ..`
 
 ## Nemo Actions Index
 
@@ -551,7 +565,11 @@ This is a small selection of feature scripts that add new features or improve ex
 
 ## Cinnamon Scripts Installation
 
-First clone this repo if you haven't already.
+First install git
+
+`apt install git`
+
+Then clone this repo if you haven't already.
 
 `git clone https://github.com/smurphos/nemo_actions_and_cinnamon_scripts.git`
 
@@ -574,6 +592,16 @@ Install dependencies required by the scripts
 See the scripts index for any other script specific setup recommendations.
 
 Log off and back on.
+
+## Cinnamon Script updating
+
+In a terminal navigate to the `nemo_actions_and_cinnamon_scripts` folder created when you originally cloned the repo
+
+e.g `cd nemo_actions_and_cinnamon_scripts`
+
+Once in the correct folder update your local copy with the latest commits, before reinstalling your scripts.
+
+`git pull origin; cd ..`
 
 ## Cinnamon Scripts Index
 
