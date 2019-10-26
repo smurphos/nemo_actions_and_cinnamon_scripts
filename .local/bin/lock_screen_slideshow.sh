@@ -8,16 +8,19 @@
 
 # These variables are intended to be set by the end user.
 
-# Set SLIDESHOW to true if you want a lock-screen / screensaver slideshow, false if you want a static image
-SLIDESHOW=true
-
 # Set STATIC_BACKGROUND to the path to your image of choice for static image mode
 STATIC_BACKGROUND="/usr/share/backgrounds/linuxmint/default_background.jpg"
+
+# Set SLIDESHOW to true if you want a lock-screen / screensaver slideshow, false if you want a static image
+SLIDESHOW=true
 
 # Set SLIDESHOW_DIR to a directory of your choice
 # This directory and it's sub-directorys will be searched for images
 # for display in a random order in slideshow mode
 SLIDESHOW_DIR="/usr/share/backgrounds"
+
+# Set SLIDESHOW_RANDOM to true if you want the display of images in slideshow mode to be randomised, false if not
+SLIDESHOW_RANDOM=true
 
 # INTERVAL is the time time in seconds between background transitions in slideshow mode
 INTERVAL=10
@@ -32,6 +35,16 @@ done
 
 # set initial status
 ACTIVE=false
+
+# Populate IMAGES array in non random slideshow mode
+if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
+  IMAGES=()
+  while IFS=  read -r -d $'\0'; do
+    IMAGES+=("$REPLY")
+  done < <(find "$SLIDESHOW_DIR" -iname '*.*p*g' -print0)
+  echo "${#IMAGES[@]}"
+fi
+
 # Start the main loop to monitor screensaver status changes
 dbus-monitor --profile "interface='org.cinnamon.ScreenSaver', member='ActiveChanged'" | while read -r
 do
@@ -52,7 +65,15 @@ do
     # Update background if in slideshow mode
     if ( $SLIDESHOW ); then
       if [ $TIMER == $INTERVAL ] ; then
-        LOCK_BACKGROUND=$(find "$SLIDESHOW_DIR" -iname '*.jp*g' -o -iname '*.png' | shuf -n1)
+        if ( $SLIDESHOW_RANDOM ); then
+          LOCK_BACKGROUND="$(find "$SLIDESHOW_DIR" -iname '*.*p*g' | shuf -n1)"
+        else
+          LOCK_BACKGROUND="${IMAGES[$INDEX]}"
+          ((INDEX++))
+          if [ $INDEX -ge "${#IMAGES[@]}" ]; then
+            INDEX=0
+          fi
+        fi
         gsettings set org.cinnamon.desktop.background picture-uri "file://$LOCK_BACKGROUND"
         TIMER=0
       fi
