@@ -18,10 +18,13 @@ CRIT_BAT=13
 # Critical Battery Action Level
 CRIT_BAT_ACTION=10
 
-# Check for existing instance and exit if already running
-if pidof -o %PPID -x "${0##*/}"; then
-  exit 1
-fi
+# Main script starts here
+# Check for existing instances and kill them leaving current instance running
+for PID in $(pidof -o %PPID -x "${0##*/}"); do
+    if [ "$PID" != $$ ]; then
+        kill -9 "$PID"
+    fi 
+donei
 
 #Find battery
 if upower -e | grep battery; then

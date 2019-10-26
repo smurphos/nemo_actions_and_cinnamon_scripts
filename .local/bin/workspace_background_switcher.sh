@@ -10,10 +10,13 @@ WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint/edesigner_linuxmint.jp
 WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.jpg"
 
 
-# Check for existing instance and exit if already running
-if pidof -o %PPID -x "${0##*/}"; then
-  exit 1
-fi
+# Main script starts here
+# Check for existing instances and kill them leaving current instance running
+for PID in $(pidof -o %PPID -x "${0##*/}"); do
+    if [ "$PID" != $$ ]; then
+        kill -9 "$PID"
+    fi 
+done
 # Monitor for workspace changes and set the background on change.
 xprop -root -spy _NET_CURRENT_DESKTOP | while read -r;
   do

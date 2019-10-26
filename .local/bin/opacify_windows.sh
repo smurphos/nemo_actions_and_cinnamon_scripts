@@ -60,10 +60,13 @@ for w in $WIDS; do
   fi
 done }
 
-# Check for existing instance and exit if already running
-if pidof -o %PPID -x "${0##*/}"; then
-  exit 1
-fi
+# Main script starts here
+# Check for existing instances and kill them leaving current instance running
+for PID in $(pidof -o %PPID -x "${0##*/}"); do
+    if [ "$PID" != $$ ]; then
+        kill -9 "$PID"
+    fi 
+done
 # main loop
 while :
 do
