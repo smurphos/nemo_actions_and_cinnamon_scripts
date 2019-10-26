@@ -23,10 +23,13 @@ SLIDESHOW_DIR="/usr/share/backgrounds"
 INTERVAL=10
 
 # Main script starts here
-# Check for existing instance and exit if already running
-if pidof -o %PPID -x "${0##*/}"; then
-  exit 1
-fi
+# Check for existing instances and kill them leaving current instance running
+for PID in $(pidof -o %PPID -x "${0##*/}"); do
+    if [ "$PID" != $$ ]; then
+        kill -9 "$PID"
+    fi 
+done
+
 # set initial status
 ACTIVE=false
 # Start the main loop to monitor screensaver status changes
