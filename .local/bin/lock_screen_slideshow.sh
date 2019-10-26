@@ -42,7 +42,6 @@ if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
   while IFS=  read -r -d $'\0'; do
     IMAGES+=("$REPLY")
   done < <(find "$SLIDESHOW_DIR" -iname '*.*p*g' -print0)
-  echo "${#IMAGES[@]}"
 fi
 
 # Start the main loop to monitor screensaver status changes
