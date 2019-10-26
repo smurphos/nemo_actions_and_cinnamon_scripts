@@ -6,8 +6,8 @@
 # Set your images here - one per active workspace.
 # Add extra WORKSPACE_BACKGROUND[X] entries as necessary.
 WORKSPACE_BACKGROUND[0]="/usr/share/backgrounds/linuxmint/bookwood_linuxmint.jpg"
-WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint/edesigner_linuxmint.jpg"
-WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.jpg"
+WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint/edesigner_linuxmint.png"
+WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.png"
 
 
 # Main script starts here
