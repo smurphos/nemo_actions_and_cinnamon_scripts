@@ -38,6 +38,7 @@ ACTIVE=false
 
 # Populate IMAGES array in non random slideshow mode
 if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
+  INDEX=0
   IMAGES=()
   while IFS=  read -r -d $'\0'; do
     IMAGES+=("$REPLY")
