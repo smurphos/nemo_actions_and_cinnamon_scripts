@@ -22,6 +22,9 @@ SLIDESHOW_DIR="/usr/share/backgrounds"
 # Set SLIDESHOW_RANDOM to true if you want the display of images in slideshow mode to be randomised, false if not
 SLIDESHOW_RANDOM=true
 
+# Set to PERSISTENT_INDEX=true if you want to remember the position of a non-random slideshow between sessions, false if not
+PERSISTENT_INDEX=true
+
 # INTERVAL is the time time in seconds between background transitions in slideshow mode
 INTERVAL=10
 
@@ -38,11 +41,15 @@ ACTIVE=false
 
 # Populate IMAGES array in non random slideshow mode
 if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
-  INDEX=0
+  if ( $PERSISTENT_INDEX ) && [ -f ~/.local/bin/lock_screen_index ]; then
+    INDEX=$(cat ~/.local/bin/lock_screen_index)
+  else
+    INDEX=0
+  fi
   IMAGES=()
-  while IFS=  read -r -d $'\0'; do
+  while IFS=  read -r -d $'\n'; do
     IMAGES+=("$REPLY")
-  done < <(find "$SLIDESHOW_DIR" -iname '*.*p*g' -print0)
+  done < <(find "$SLIDESHOW_DIR" -iname '*.*p*g' | sort -n)
 fi
 
 # Start the main loop to monitor screensaver status changes
@@ -72,6 +79,9 @@ do
           ((INDEX++))
           if [ $INDEX -ge "${#IMAGES[@]}" ]; then
             INDEX=0
+          fi
+          if ( $PERSISTENT_INDEX ); then
+            echo "$INDEX" > ~/.local/bin/lock_screen_index
           fi
         fi
         gsettings set org.cinnamon.desktop.background picture-uri "file://$LOCK_BACKGROUND"
