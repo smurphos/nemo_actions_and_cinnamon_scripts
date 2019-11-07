@@ -695,7 +695,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
-`xdg-open ~/.local/bin/workspace_background_switcher.sh`
+`xdg-open ~/.local/bin/custom_workspaces.sh`
 
 If you choose to set the variable `SWITCH_DESKTOP_WITH_WS` to true you will also need to run the cinnamon_patcher script.
 
