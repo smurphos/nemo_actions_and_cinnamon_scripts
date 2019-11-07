@@ -17,16 +17,16 @@ AUTO_BACKGROUND=true
 # as you intend to have workspaces. Cinnamon support upto 36 workspaces (0 to 35).
 # The script will load images into an array sorted by filename. You can name your background images 00.jpg, 01.jpg, 02.jpg ... 33.jpg, 34.jpg, 35.jpg
 # to associate specific backgrounds with specific workspaces.
-AUTO_BACKGROUND_DIR="/home/steve/Pictures/Wallpapers/Desktop/Workspace_Backgrounds"
+AUTO_BACKGROUND_DIR="/usr/share/backgrounds"
 
 # If AUTO_BACKGROUND is false set specific workspace background images here
 # Add extra WORKSPACE_BACKGROUND[X] entries as necessary for your maximum number of workspaces. Cinnamon supports workspace numbers 1 to 36.
-WORKSPACE_BACKGROUND[0]="/opt/backgrounds/People/2048x1401_People_19c4165b4b8e97d487f862ed7bf8ea01f4d8a8a657ef431f12e040b5feacc70d.jpg"
-WORKSPACE_BACKGROUND[1]="/opt/backgrounds/Personal/IMG_20190902_060119-01.jpeg"
-WORKSPACE_BACKGROUND[2]="/opt/backgrounds/Personal/IMG_20190831_150512-01.jpeg"
+WORKSPACE_BACKGROUND[0]="/usr/share/backgrounds/linuxmint/bookwood_linuxmint.jpg"
+WORKSPACE_BACKGROUND[1]="/usr/share/backgrounds/linuxmint/edesigner_linuxmint.png"
+WORKSPACE_BACKGROUND[2]="/usr/share/backgrounds/linuxmint/sele_linuxmint.png"
 
 # Set SWITCH_DESKTOP_WITH_WS to true to have a different desktop folder associated with each workspace.
-SWITCH_DESKTOP_WITH_WS=true
+SWITCH_DESKTOP_WITH_WS=false
 
 # Main script starts here
 
