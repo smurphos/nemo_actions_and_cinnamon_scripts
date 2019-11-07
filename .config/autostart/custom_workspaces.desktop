@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=custom_workspaces.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name=custom_workspaces.desktop
+Comment=Custom workspace backgrounds and files
+X-GNOME-Autostart-Delay=15
+Name[en_GB]=custom_workspaces.desktop

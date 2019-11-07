@@ -673,6 +673,36 @@ Optionally review the script to amend end user editable variables to suit your p
 
 `xdg-open ~/.local/bin/workspace_background_switcher.sh`
 
+#### Custom Workspaces (beta)
+
+This script replaces Workspace Background Switcher above. You should not have both installed at the same time,
+
+It allows the user to different backgrounds for each Cinnamon workspace, and optionally to have a specific Desktop folder associated with each workspace. It is intended to be run on user login as a startup application.
+
+The latter feature is disabled by default. If you decide to enable it please note the requirment to use the cinnamon_patcher script first to patch some cinnamon components.
+
+The cinnamon_patcher script has been written to support Cinnamon versions 3.0.7, 3.2.7, 3.4.6, 3.6.7, 3.8.9, 4.0.10 & 4.2.4.
+
+However testing has been limited and primarily concentrated on 4.2.4 and 3.6.7. Feedback is welcome. The script facilitates both applying and reverting the needed patches.
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#cinnamon-scripts-installation)
+
+`mkdir ~/.local/bin`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/custom_workspaces.sh ~/.local/bin`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/custom_workspaces.desktop ~/.config/autostart`
+
+Optionally review the script to amend end user editable variables to suit your preferences.
+
+`xdg-open ~/.local/bin/workspace_background_switcher.sh`
+
+If you choose to set the variable `SWITCH_DESKTOP_WITH_WS` to true you will also need to run the cinnamon_patcher script.
+
+Launch it from a terminal and follow the prompts. 
+
+`./nemo_actions_and_cinnamon_scripts/patcher/cinnamon_patcher_0.1.sh`
+
 #### Opacify Windows
 
 This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.

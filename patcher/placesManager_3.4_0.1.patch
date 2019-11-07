@@ -1,0 +1,58 @@
+--- /home/steve/Downloads/cinnamon-common/Tina/usr/share/cinnamon/js/ui/placesManager.js	2019-09-04 10:48:15.000000000 +0100
++++ /usr/share/cinnamon/js/ui/placesManager.js.patched	2019-11-06 05:38:30.032350679 +0000
+@@ -405,8 +405,54 @@
+     getAllPlaces: function () {
+         return this.getDefaultPlaces().concat(this.getBookmarks(), this.getMounts());
+     },
+-
++    
++    // Patched by placesManager_3.4_0.1.patch
+     getDefaultPlaces: function () {
++        GLib.reload_user_special_dirs_cache();
++        this._defaultPlaces = [];
++
++        let homeFile = Gio.file_new_for_path (GLib.get_home_dir());
++        let homeUri = homeFile.get_uri();
++        let homeLabel = Cinnamon.util_get_label_for_uri (homeUri);
++        let homeIcon = Cinnamon.util_get_icon_for_uri (homeUri);
++        this._home = new PlaceInfo('special:home', homeLabel,
++            function(size) {
++                return new St.Icon({ gicon: homeIcon, icon_size: size });
++            },
++            function(params) {
++                Gio.app_info_launch_default_for_uri(homeUri, _makeLaunchContext(params));
++            });
++
++        let desktopPath = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
++        let desktopFile = Gio.file_new_for_path (desktopPath);
++        let desktopUri = desktopFile.get_uri();
++        let desktopLabel = Cinnamon.util_get_label_for_uri (desktopUri);
++        let desktopIcon = Cinnamon.util_get_icon_for_uri (desktopUri);
++        this._desktopMenu = new PlaceInfo('special:desktop', desktopLabel,
++            function(size) {
++                return new St.Icon({ gicon: desktopIcon, icon_size: size });
++            },
++            function(params) {
++                Gio.app_info_launch_default_for_uri(desktopUri, _makeLaunchContext(params));
++            });
++
++        this._connect = new PlaceInfo('special:connect', _("Connect to..."),
++            function (size) {
++                return new St.Icon({ icon_name: 'applications-internet',
++                                     icon_type: St.IconType.FULLCOLOR,
++                                     icon_size: size });
++            },
++            function (params) {
++                // BUG: nemo-connect-server doesn't have a desktop file, so we can't
++                // launch it with the workspace from params. It's probably pretty rare
++                // and odd to drag this place onto a workspace in any case
++
++                Util.spawn(['nemo-connect-server']);
++            });
++
++        this._defaultPlaces.push(this._home);
++        this._defaultPlaces.push(this._desktopMenu);
++        this._defaultPlaces.push(this._connect);		
+         return this._defaultPlaces;
+     },
+ 
