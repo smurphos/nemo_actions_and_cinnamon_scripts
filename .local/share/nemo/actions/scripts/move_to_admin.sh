@@ -6,6 +6,8 @@ if [ -z "$DEST" ]; then
 fi
 #Get ownership of $DEST
 DESTOWNER=$(stat -c %U "$DEST")
+export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+SUCCESSSTRING="Successfully moved:"
 for i in "$@"; do
 #Check not overwriting an existing file or directory
   FILE=$(basename "$i")
@@ -21,15 +23,19 @@ for i in "$@"; do
   else
     NAME=$FILE
   fi
+  #Check current file owner
+  SOURCEOWNER=$(stat -c %U "$i")
 #Is destination under ownership of user?
-if [ "$DESTOWNER" != "$USER" ] ; then
-    if [ -z "$PASS" ]; then
-      PASS=$(zenity --password --title="Authenticate to paste.")
+  if [ "$DESTOWNER" != "$USER" ]; then
+    if [ "$DESTOWNER" == "$SOURCEOWNER" ]; then
+     sudo -A -u "$DESTOWNER" mv "$i" "$DEST/$NAME"
+    else
+     sudo -A -u "$DESTOWNER" cp -r "$i" "$DEST/$NAME"
+     sudo -A rm -r "$i"
     fi
-    if [ -z "$PASS" ]; then
-     exit 1
-    fi
-    echo -e "$PASS" | sudo -S -u "$DESTOWNER" mv "$i" "$DEST/$NAME"
+  elif [ "$SOURCEOWNER" != "$USER" ]; then
+     cp -r "$i" "$DEST/$NAME"
+     sudo -A rm -r "$i"
   else
     mv "$i" "$DEST/$NAME"
   fi
@@ -37,6 +43,8 @@ if [ "$DESTOWNER" != "$USER" ] ; then
     zenity --info --width=250 --text="Error moving $i. Try again."
     exit 1
   else
-    notify-send --expire-time=200000 "Successfully moved $i to $DEST/$NAME"
+    SUCCESSSTRING+="
+    $i to $DEST/$NAME"
   fi
 done
+notify-send "$SUCCESSSTRING"

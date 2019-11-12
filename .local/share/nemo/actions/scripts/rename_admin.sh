@@ -11,8 +11,8 @@ if [ -e "$2/$NAME" ]; then
 fi
 #Is location writeable?
 if [ ! -w "$2" ] ; then
-  PASS=$(zenity --password --title="Authenticate to rename.")
-  echo -e "$PASS" | sudo -S mv "$1" "$2/$NAME"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh" 
+  sudo -A mv "$1" "$2/$NAME"
 else
   mv "$1" "$2/$NAME"
 fi

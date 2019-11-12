@@ -12,11 +12,8 @@ fi
 #Is destination under ownership of user?
 DESTOWNER=$(stat -c %U "$1")
 if [ "$DESTOWNER" != "$USER" ] ; then
-  PASS=$(zenity --password --title="Authenticate to create directory.")
-  if [ -z "$PASS" ]; then
-   exit 1
-  fi
-  echo -e "$PASS" | sudo -S -u "$DESTOWNER" mkdir "$1/$NAME"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+  sudo -A -u "$DESTOWNER" mkdir "$1/$NAME"
 else
   mkdir "$1/$NAME"
 fi
