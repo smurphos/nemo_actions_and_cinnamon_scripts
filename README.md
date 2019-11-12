@@ -14,9 +14,11 @@ Some actions in this repo also require an associated shell script. These should 
 
 ## Nemo Action installation
 
+These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` woth the equivalent for your distro's package management system.
+
 First install git
 
-`apt install git`
+`sudo apt install git`
 
 Then clone this repo
 
@@ -30,9 +32,9 @@ To install all of the nemo actions
 
 Install other dependencies used by the actions
 
-`apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree imagemagick`
+`sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree imagemagick`
 
-Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
+Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
 Open Nemo > Preferences > Plugins and review any actions you wish to disable.
 
@@ -70,7 +72,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/close_windows.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install xdotool wmctrl`
+`sudo apt install xdotool wmctrl`
 
 #### Workspace management actions
 
@@ -102,7 +104,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/window_overview.nemo_action ~/.local/share/nemo/actions`
 
-`apt install xdotool`
+`sudo apt install xdotool`
 
 #### Background slide-show actions
 
@@ -188,7 +190,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/xed_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -204,7 +206,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/geany_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -232,7 +234,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/copy_to_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -252,7 +254,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/move_to_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -272,7 +274,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_link_in_target.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -296,7 +298,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_dir_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -320,7 +322,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/create_file_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -340,7 +342,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/delete_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -360,7 +362,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/rename_admin.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
@@ -381,7 +383,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/disk_usage.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 #### Add to desktop actions
 
@@ -432,7 +434,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/bulk_rename_folders.nemo_action ~/.local/share/nemo/actions`
 
-`apt install gprename`
+`sudo apt install gprename`
 
 #### Apply custom emblems
 
@@ -451,9 +453,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/apply_custom_emblem.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity wmctrl imagemagick`
+`sudo apt install zenity wmctrl imagemagick`
 
-Either `apt install xplayer` or `apt install ffmpeg ffmpegthumbnailer`
+Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
 #### Set folder view recursively
 
@@ -471,7 +473,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/set_folder_view_recursively.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity wmctrl`
+`sudo apt install zenity wmctrl`
 
 #### Media info
 
@@ -483,7 +485,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/media-info.nemo_action ~/.local/share/nemo/actions`
 
-`apt install mediainfo-gui`
+`sudo apt install mediainfo-gui`
 
 #### Search folders
 
@@ -495,11 +497,11 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/searchmonkey.nemo_action ~/.local/share/nemo/actions`
 
-`apt install searchmonkey`
+`sudo apt install searchmonkey`
 
 #### View a tree-view directory structure in your browser
 
-An action and associated shell script to produce an html tree-view of the directory and file structure below the selected directory. Requires tree - `apt install tree`
+An action and associated shell script to produce an html tree-view of the directory and file structure below the selected directory. Requires tree - `sudo apt install tree`
 
 [print_tree.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/print_tree.nemo_action)
 
@@ -513,7 +515,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/print_tree.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install tree`
+`sudo apt install tree`
 
 #### Copy a random selection of files from a directory
 
@@ -532,7 +534,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/get_random_files.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 #### Toggle checked emblem
 
@@ -575,7 +577,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
 
-`apt install shellcheck`
+`sudo apt install shellcheck`
 
 # Cinnamon Scripts
 
@@ -583,9 +585,15 @@ This is a small selection of feature scripts that add new features or improve ex
 
 ## Cinnamon Scripts Installation
 
+These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` woth the equivalent for your distro's package management system.
+
+They also assume your distro is set up to automatically add `~/.local/bin/` to your $PATH when it exists. This is the case in Linux Mint main edition but not LMDE for example.
+
+If after installation scripts are not autostarting on login check the output of `echo $PATH`. If the output does not include `~/.local/bin/` this can normally be rectified by adding the string `PATH=~/.local/bin/:$PATH` to `~/.profile`
+
 First install git
 
-`apt install git`
+`sudo apt install git`
 
 Then clone this repo if you haven't already.
 
@@ -605,7 +613,7 @@ To install autostart entries for relevant scripts
 
 Install dependencies required by the scripts
 
-`apt install zenity xdotool wmctrl`
+`sudo apt install zenity xdotool wmctrl`
 
 See the scripts index for any other script specific setup recommendations.
 
@@ -638,7 +646,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/lock_screen_slideshow.desktop ~/.config/autostart`
 
-`apt install qdbus`
+`sudo apt install qdbus`
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
@@ -694,7 +702,7 @@ Optionally review the script to amend end user editable variables to suit your p
 #### Opacify Windows
 
 This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.
-The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application. Requires xdotool and wmctrl - `apt install xdotool wmctrl`
+The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application. Requires xdotool and wmctrl - `sudo apt install xdotool wmctrl`
 
 [opacify_windows.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/opacify_windows.sh)
 
@@ -706,7 +714,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/opacify_windows.desktop ~/.config/autostart`
 
-`apt install xdotool wmctrl`
+`sudo apt install xdotool wmctrl`
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
@@ -714,7 +722,7 @@ Optionally review the script to amend end user editable variables to suit your p
 
 #### Battery Event Warnings
 
-This script uses zenity - `apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
+This script uses zenity - `sudo apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
 It is intended to be run on user login as a startup application. Please note the script modifies Cinnamon's default thresholds for Low & Critical battery events and actions. Please review the script if you want to set these thresholds to your preference.
 
 [battery_mon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/battery_mon.sh)
@@ -727,7 +735,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/battery_mon.desktop ~/.config/autostart`
 
-`apt install zenity`
+`sudo apt install zenity`
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
