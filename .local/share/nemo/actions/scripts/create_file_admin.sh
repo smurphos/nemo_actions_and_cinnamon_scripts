@@ -12,11 +12,8 @@ fi
 #Is destination under ownership of user?
 DESTOWNER=$(stat -c %U "$1")
 if [ "$DESTOWNER" != "$USER" ] ; then
-  PASS=$(zenity --password --title="Authenticate to create file.")
-  if [ -z "$PASS" ]; then
-   exit 1
-  fi
-  echo -e "$PASS" | sudo -S -u "$DESTOWNER" touch "$1/$NAME"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+  sudo -A -u "$DESTOWNER" touch "$1/$NAME"
 else
   touch "$1/$NAME"
 fi

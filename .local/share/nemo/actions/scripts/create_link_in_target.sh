@@ -21,11 +21,8 @@ if [ -e "$DEST/$NAME" ]; then
 fi
 #Is destination writeable?
 if [ ! -w "$DEST" ] ; then
-  PASS=$(zenity --password --title="Authenticate to create link.")
-  if [ -z "$PASS" ]; then
-   exit 1
-  fi
-  echo -e "$PASS" | sudo -S ln -s "$1" "$DEST/$NAME"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+  sudo -A ln -s "$1" "$DEST/$NAME"
 else
   ln -s "$1" "$DEST/$NAME"
 fi
