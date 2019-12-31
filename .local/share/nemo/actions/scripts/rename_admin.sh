@@ -1,6 +1,7 @@
 #!/bin/bash
 #Get new name
-NAME=$(zenity --entry --width=250 --title "File name" --text="Confirm new filename" --entry-text="$3" )
+ENTRY=$(basename "$1")
+NAME=$(zenity --entry --width=400 --title "File name" --text="Confirm new filename" --entry-text="$ENTRY")
 if [ -z "$NAME" ]; then
   exit 1; 
 fi
