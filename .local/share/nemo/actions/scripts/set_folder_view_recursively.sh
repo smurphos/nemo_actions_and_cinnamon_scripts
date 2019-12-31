@@ -12,7 +12,7 @@ function set_metadata {
     INCREMENT=$(echo "scale=2;$MAX / 100" | bc)
     find -L "$1" -type d -print0 | while IFS= read -r -d $'\0' DIRS; do
     gio set "$DIRS" metadata::nemo-default-view "$2"
-    gio set "$DIRS" metadata::nemo-icon-view-zoom-level "$3"
+    gio set "$DIRS" $3
     ((COUNT++))
     PROGRESS=$(echo "$COUNT / $INCREMENT" | bc)
     echo "$PROGRESS"
@@ -41,13 +41,13 @@ fi
 # Apply choices via set_metadata function
 case $VIEW in
 1)
-  set_metadata "$1" "OAFIID:Nemo_File_Manager_Icon_View" "$ZOOM"
+  set_metadata "$1" "OAFIID:Nemo_File_Manager_Icon_View" "metadata::nemo-icon-view-zoom-level $ZOOM"
   ;;  
 2)
-  set_metadata "$1" "OAFIID:Nemo_File_Manager_Compact_View" "$ZOOM"
+  set_metadata "$1" "OAFIID:Nemo_File_Manager_Compact_View" "metadata::nemo-compact-view-zoom-level $ZOOM"
   ;;  
 3)
-  set_metadata "$1" "OAFIID:Nemo_File_Manager_List_View" "$ZOOM"
+  set_metadata "$1" "OAFIID:Nemo_File_Manager_List_View" "metadata::nemo-list-view-zoom-level $ZOOM"
   ;;  
 esac
 # Restart Nemo to apply changes.
