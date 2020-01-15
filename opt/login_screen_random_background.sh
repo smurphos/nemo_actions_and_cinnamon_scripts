@@ -28,9 +28,14 @@ RANDOM_ORDER=true
 # Main script
 # Set Working Directory
 cd /etc/lightdm || exit
+# Create slick-greeter.conf if it doesn't exist
+if [ ! -f slick-greeter.conf ]; then
+  touch slick-greeter.conf
+  echo "[Greeter]" >> slick-greeter.conf
+fi
 # Check for draw-user-backgrounds=false declaration and add it if missing
 if (! grep -q "draw-user-backgrounds=false" slick-greeter.conf) ; then 
-    echo "draw-user-backgrounds=false" >> slick-greeter.conf
+  echo "draw-user-backgrounds=false" >> slick-greeter.conf
 fi
 # Populate IMAGES array in sequential mode
 if ( ! $RANDOM_ORDER ); then
