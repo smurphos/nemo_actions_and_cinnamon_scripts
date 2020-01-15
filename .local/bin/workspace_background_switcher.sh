@@ -20,5 +20,6 @@ done
 # Monitor for workspace changes and set the background on change.
 xprop -root -spy _NET_CURRENT_DESKTOP | while read -r;
   do
-    gsettings set org.cinnamon.desktop.background picture-uri "file://${WORKSPACE_BACKGROUND[${REPLY: -1}]}"
+  WORKSPACE=$(echo ${REPLY} | cut -d" " -f3)
+    gsettings set org.cinnamon.desktop.background picture-uri "file://${WORKSPACE_BACKGROUND[$WORKSPACE]}"
   done
