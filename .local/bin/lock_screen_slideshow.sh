@@ -41,8 +41,8 @@ ACTIVE=false
 
 # Populate IMAGES array in non random slideshow mode
 if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
-  if ( $PERSISTENT_INDEX ) && [ -f ~/.local/bin/lock_screen_index ]; then
-    INDEX=$(cat ~/.local/bin/lock_screen_index)
+  if ( $PERSISTENT_INDEX ) && [ -f ~/.config/lock_screen_index ]; then
+    INDEX=$(cat ~/.config/smurphos_lock_screen_index)
   else
     INDEX=0
   fi
@@ -81,7 +81,7 @@ do
             INDEX=0
           fi
           if ( $PERSISTENT_INDEX ); then
-            echo "$INDEX" > ~/.local/bin/lock_screen_index
+            echo "$INDEX" > ~/.config/smurphos_lock_screen_index
           fi
         fi
         gsettings set org.cinnamon.desktop.background picture-uri "file://$LOCK_BACKGROUND"
