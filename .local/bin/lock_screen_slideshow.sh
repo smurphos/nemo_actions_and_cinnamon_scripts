@@ -63,6 +63,8 @@ do
     if ( ! $ACTIVE ) ; then
       NATIVE_SLIDESHOW_STATE=$(gsettings get org.cinnamon.desktop.background.slideshow slideshow-enabled)
       DESK_BACKGROUND=$(gsettings get org.cinnamon.desktop.background picture-uri)
+      DESK_MODE=$(gsettings get org.cinnamon.desktop.background picture-options)
+      gsettings set org.cinnamon.desktop.background picture-options "zoom"
       ACTIVE=true
       if ( ! $SLIDESHOW ) ; then
         gsettings set org.cinnamon.desktop.background picture-uri "file://$STATIC_BACKGROUND"
@@ -93,6 +95,7 @@ do
   done 
   # Set background back to the user background and unpause native slideshow on screensaver de-activation
   if ( $ACTIVE ) ; then
+    gsettings set org.cinnamon.desktop.background picture-options "$DESK_MODE"
     if ( $NATIVE_SLIDESHOW_STATE ) ; then
       gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled "$NATIVE_SLIDESHOW_STATE"
     else
