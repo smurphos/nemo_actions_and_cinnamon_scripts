@@ -24,7 +24,6 @@ for PID in $(pidof -o %PPID -x "${0##*/}"); do
     if [ "$PID" != $$ ]; then
         kill -9 "$PID"
     fi 
-donei
 
 #Find battery
 if upower -e | grep battery; then
