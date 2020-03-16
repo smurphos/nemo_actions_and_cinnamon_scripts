@@ -65,7 +65,7 @@ else
 		sleep 1m
 		continue
 	elif [ "$LEVEL" -le "$LOW_BAT" ] && [ "$STATUS" != "Low" ] && [ "$STATUS" != "Critical" ]; then
-        zenity --warning --text="\nBattery Low - $LEVEL% left.\n\nPlugin to AC.\n\nThe system will $CRIT_ACTION at $CRIT_BAT_ACTION%" --width=400
+                zenity --warning --text="\nBattery Low - $LEVEL% left.\n\nPlugin to AC.\n\nThe system will $CRIT_ACTION at $CRIT_BAT_ACTION%" --width=400
 		STATUS="Low"
 		sleep 1m
 		continue
