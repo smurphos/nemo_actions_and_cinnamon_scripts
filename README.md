@@ -50,9 +50,9 @@ Once in the correct folder update your local copy with the latest commits, befor
 
 ## Nemo Actions Index
 
-### Action management actions
+## Action management actions
 
-#### Sort actions
+### Sort actions
 
 Unfortunately the ordering of actions in Nemo's contect menu is based on the last modification date of the .nemo_action file.
 
@@ -72,9 +72,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-### Desktop context menu actions
+## Desktop context menu actions
 
-#### Close windows actions.
+### Close windows actions.
 
 A set of two actions and an associated shell script to allow the user to gracefully close all open windows on the current workspace or all workspaces via right click on the desktop.
 
@@ -96,7 +96,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install xdotool wmctrl`
 
-#### Workspace management actions
+### Workspace management actions
 
 A set of six actions to allow easy management of workspaces from the desktop context menu.
 
@@ -128,7 +128,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install xdotool`
 
-#### Background slide-show actions
+### Background slide-show actions
 
 An action to quickly toggle the desktop background slide-show, along with an action to select the next wallpaper when the slide-show is active.
 
@@ -142,7 +142,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/next-wallpaper.nemo_action ~/.local/share/nemo/actions`
 
-#### Session management actions
+### Session management actions
 
 The first two actions give quick access from the desktop context menu to the shutdown and logoff session dialogues.
 
@@ -180,9 +180,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/session_logout.nemo_action ~/.local/share/nemo/actions`
 
-### General Actions
+## General Actions
 
-#### Edit as other user actions
+### Edit as other user actions
 
 These actions allow you to open text files with a password prompt for elevated privileges if necessary from a regular instance of Nemo. They will all open the file with the specified text-editor using sudoedit to elevate privileges as the owner of the file if that is not the user. The could be as root or another user on the system.
 
@@ -232,7 +232,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-#### File actions as admin
+### File actions as admin
 
 These actions and their associated shell scripts allow the user to undertake a range of file management activities with elevated privileges if needed from a regular instance of Nemo.
 
@@ -240,7 +240,7 @@ They will all request password authentication if elevated privileges are necessa
 
 All require zenity.
 
-##### Copy to (Admin)
+### Copy to (Admin)
 
 Supports single and multiple selections.
 
@@ -260,7 +260,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Move to (Admin)
+### Move to (Admin)
 
 Supports single and multiple selections
 
@@ -280,7 +280,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Creating links (Admin)
+### Creating links (Admin)
 
 Supports single selections only.
 
@@ -300,7 +300,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Create Directory (Admin)
+### Create Directory (Admin)
 
 This action has two nemo_action files, one for right-click on a directory, and one for right-click on empty space.
 
@@ -324,7 +324,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Create File (Admin)
+### Create File (Admin)
 
 This action has two nemo_action files, one for right-click on a directory, and one for right-click on empty space.
 
@@ -348,7 +348,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Delete (Admin)
+### Delete (Admin)
 
 Supports single and multiple selections.
 
@@ -368,7 +368,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-##### Rename (Admin)
+### Rename (Admin)
 
 Supports single selections only.
 
@@ -388,7 +388,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
-#### Disk Usage action
+### Disk Usage action
 
 Select single or multiple files / directories to be presented with a zenity window showing the total disk usage of the selection.
 Based on an action by Linux Mint forum member [sadhu](https://forums.linuxmint.com/memberlist.php?mode=viewprofile&u=129286)
@@ -407,7 +407,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-#### File metadata action
+### File metadata action
 
 Select single files / directories to be presented with a zenity window summarising the gvfs metadata associated with file.
 
@@ -425,7 +425,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-#### Show parent package action
+### Show parent package action
 
 Select single files or directories to be presented with a zenity window stating which debian package(s) installed the file or has content in the folder.
 This action is only for nemo installed on Debian based systems
@@ -444,13 +444,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-#### Add to desktop actions
+### Add to desktop actions
 
 Two actions to quickly create a desktop link to a selected directory.
 Add link to desktop creates a link desktop file with the link emblem on the icon. However these links function slightly differently from a regular symlink as when opened it will open the original target location.
 Add launcher to desktop will result in a plain folder without a link emblem. The function is otherwise identical to add link to desktop
 
-##### Add link to desktop
+### Add link to desktop
 
 [add_link_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_link_to_desktop.nemo_action)
 
@@ -464,7 +464,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/scripts`
 
-##### Add launcher to desktop
+### Add launcher to desktop
 
 [add_launcher_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action)
 
@@ -478,7 +478,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/scripts`
 
-#### Bulk rename actions
+### Bulk rename actions
 
 Both these actions open the bulk rename utility GPrename. One action is for a single folder selection to bulk rename files in that folder.
 The other is for multiple selections and opens GPrename in the parent folder.
@@ -495,7 +495,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install gprename`
 
-#### Apply custom emblems
+### Apply custom emblems
 
 This action allows the user to create and set custom emblems derived from image files, album art or video thumbnails to files and directories.
 For directories there is an option to use a random emblem generated from the directory contents and it can be run recursively on the selected directory and it's sub-directories.
@@ -516,7 +516,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
-#### Set folder view recursively
+### Set folder view recursively
 
 This action allows the user to set default folder view (list, compact or icon) and zoom level recursively to a directory and it's sub-directories.
 
@@ -534,7 +534,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity wmctrl`
 
-#### Media info
+### Media info
 
 Shows information about media files in a separate window using mediainfo-gui - .
 
@@ -546,7 +546,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install mediainfo-gui`
 
-#### Search folders
+### Search folders
 
 Opens the selected folder in Searchmonkey for more fine-tuned file system searches including search by contents.
 
@@ -558,7 +558,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install searchmonkey`
 
-#### View a tree-view directory structure in your browser
+### View a tree-view directory structure in your browser
 
 An action and associated shell script to produce an html tree-view of the directory and file structure below the selected directory. Requires tree - `sudo apt install tree`
 
@@ -576,7 +576,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install tree`
 
-#### Copy a random selection of files from a directory
+### Copy a random selection of files from a directory
 
 Ever wanted to grab a random selection of music files or pictures from a collection? This action is for you.
 Uses zenity to ask the user to confirm number of files and where to paste them.
@@ -595,7 +595,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-#### Toggle checked emblem
+### Toggle checked emblem
 
 An action and associated shell script to quickly add or remove a ✓ emblem to the file/folder.
 
@@ -611,7 +611,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
 
-#### Update a files modification date
+### Update a files modification date
 
 [touch_file.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/touch_file.nemo_action)
 
@@ -619,7 +619,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/touch_file.nemo_action ~/.local/share/nemo/actions`
 
-#### Check a shell script for errors
+### Check a shell script for errors
 
 This action and associated shell script will check your shell scripts for errors with shellcheck.
 Scripts with no issues will be marked with a checked emblem, scripts with warnings will be marked with a warning emblem and the shellcheck output along with the shell script itself will be opened in a text editor for review.
@@ -690,7 +690,7 @@ Once in the correct folder update your local copy with the latest commits, befor
 
 ## Cinnamon Scripts Index
 
-#### Lock Screen Slideshow
+### Lock Screen Slideshow
 
 This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
 It is intended to be run on user login as a startup application. Requires qdbus to be installed.
@@ -713,7 +713,7 @@ Optionally review the script to amend end user editable variables to suit your p
 
 Logout and log back in.
 
-#### Login Screen Random Background
+### Login Screen Random Background
 
 This script facilitates the user being presented with a random background on the login screen. It is compatible with any Mint edition using Slick-Greeter and LightDM, not just Cinnamon.
 It is intended to be run from the root crontab.
@@ -740,7 +740,7 @@ Ctrl-O, Enter, Ctrl-X to save the new crontab entries. This will run the script 
 0,30 * * * * /opt/login_screen_random_background.sh
 ```
 
-#### Workspace Background Switcher
+### Workspace Background Switcher
 
 This script allows the user to different backgrounds for each Cinnamon workspace. It is intended to be run on user login as a startup application.
 
@@ -758,7 +758,7 @@ Optionally review the script to amend end user editable variables to suit your p
 
 `xdg-open ~/.local/bin/workspace_background_switcher.sh`
 
-#### Opacify Windows
+### Opacify Windows
 
 This script allows the user to set default opacity levels for open windows based on the window status and type. For example unfocused windows can be translucent whilst focused windows are opaque.
 The effect is independent of the users theme and can be used with any GTK theme. It is intended to be run on user login as a startup application. Requires xdotool and wmctrl - `sudo apt install xdotool wmctrl`
@@ -779,7 +779,7 @@ Optionally review the script to amend end user editable variables to suit your p
 
 `xdg-open ~/.local/bin/opacify_windows.sh`
 
-#### Battery Event Warnings
+### Battery Event Warnings
 
 This script uses zenity - `sudo apt install zenity` to open a warning window on battery low and critically low events. This can be helpful if gaming or watching full screen video whilst running on battery as the zenity window will demand attention.
 It is intended to be run on user login as a startup application. Please note the script modifies Cinnamon's default thresholds for Low & Critical battery events and actions. Please review the script if you want to set these thresholds to your preference.
