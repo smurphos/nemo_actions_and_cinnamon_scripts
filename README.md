@@ -14,7 +14,7 @@ Some actions in this repo also require an associated shell script. These should 
 
 ## Nemo Action installation
 
-These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` woth the equivalent for your distro's package management system.
+These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` with the equivalent for your distro's package management system.
 
 First install git
 
@@ -49,6 +49,28 @@ Once in the correct folder update your local copy with the latest commits, befor
 `git pull origin; cd ..`
 
 ## Nemo Actions Index
+
+### Action management actions
+
+#### Sort actions
+
+Unfortunately the ordering of actions in Nemo's contect menu is based on the last modification date of the .nemo_action file.
+
+This action and it's associated shell script will sort all installed actions alphabetically by the file name of the .nemo_action file. Assuming your action's display names are based on the file name this will result in actions being displayed in alphabetical order in the context menu.
+
+[sort_actions.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/sort_actions.nemo_action)
+
+[sort_actions.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/sort_actions.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/sort_actions.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/sort_actions.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install zenity`
 
 ### Desktop context menu actions
 
@@ -382,6 +404,43 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `mkdir -p ~/.local/share/nemo/actions/scripts`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/disk_usage.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install zenity`
+
+#### File metadata action
+
+Select single files / directories to be presented with a zenity window summarising the gvfs metadata associated with file.
+
+[show_metadata.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/show_metadata.nemo_action)
+
+[show_metadata.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/show_metadata.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/show_metadata.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/show_metadata.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install zenity`
+
+#### Show parent package action
+
+Select single files or directories to be presented with a zenity window stating which debian package(s) installed the file or has content in the folder.
+This action is only for nemo installed on Debian based systems
+
+[show_parent_package.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/show_parent_package.nemo_action)
+
+[show_parent_package.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/show_parent_package.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/show_parent_package.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/show_parent_package.sh ~/.local/share/nemo/actions/scripts`
 
 `sudo apt install zenity`
 

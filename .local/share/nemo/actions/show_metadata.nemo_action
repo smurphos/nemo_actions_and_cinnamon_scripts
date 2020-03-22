@@ -1,0 +1,10 @@
+[Nemo Action]
+Name=Show _Metadata
+Comment=Display a dialogue with %F's metadata
+Exec=<scripts/show_metadata.sh %F>
+Icon-Name=help-faq-symbolic
+Selection=s
+Extensions=any;
+EscapeSpaces=true
+Dependencies=zenity;
+
