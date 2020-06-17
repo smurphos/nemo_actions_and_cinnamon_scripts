@@ -4,7 +4,6 @@
 # Built and tested with Cinnamon 4.0.9 on Mint 19.1, but will probably work with older versions of Cinnamon
 # Save the script as ~/bin/lock_screen_slideshow.sh or ~/.local/bin/lock_screen_slideshow.sh and make executable
 # Add a entry to Startup Applications to launch the script after user login with a delay of 30 seconds
-# Install dependency qdbus - apt install qdbus
 
 # These variables are intended to be set by the end user.
 
@@ -56,7 +55,7 @@ fi
 dbus-monitor --profile "interface='org.cinnamon.ScreenSaver', member='ActiveChanged'" | while read -r
 do
   # Screensaver active loop.
-  while $(qdbus org.cinnamon.ScreenSaver /org/cinnamon/ScreenSaver org.cinnamon.ScreenSaver.GetActive) == true
+  while dbus-send --print-reply --dest=org.cinnamon.ScreenSaver /org/cinnamon/ScreenSaver org.cinnamon.ScreenSaver.GetActive | grep -q true
   do
     # If screensaver just activated check status of native background slide-show, get user background and either set static
     # lock screen background or start slideshow

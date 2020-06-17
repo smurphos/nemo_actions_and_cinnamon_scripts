@@ -693,7 +693,7 @@ Once in the correct folder update your local copy with the latest commits, befor
 ### Lock Screen Slideshow
 
 This script adds a user configurable desktop background slideshow function to the native Cinnamon screensaver/screen locker.
-It is intended to be run on user login as a startup application. Requires qdbus to be installed.
+It is intended to be run on user login as a startup application.
 
 [lock_screen_slideshow.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/bin/lock_screen_slideshow.sh)
 
@@ -704,8 +704,6 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/bin/lock_screen_slideshow.sh ~/.local/bin`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.config/autostart/lock_screen_slideshow.desktop ~/.config/autostart`
-
-`sudo apt install qdbus`
 
 Optionally review the script to amend end user editable variables to suit your preferences.
 
