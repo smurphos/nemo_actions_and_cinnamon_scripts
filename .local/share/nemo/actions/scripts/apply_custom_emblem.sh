@@ -50,7 +50,7 @@ if [ -f "$1" ] || ANSWER=$(zenity --question --icon-name=dialog-question  --extr
   else
   SOURCE_DIR=$(xdg-user-dir PICTURES)
   fi
-  SOURCE_PIC=$(zenity --file-selection --filename="$SOURCE_DIR"/ --file-filter='Supported media (jpg/png/gif/tiff/mp3/mp4/mkv/avi/mov) | *.jp*g *JP*G *.png *.PNG *.gif *.GIF *.tif* *.TIF^ *.mp* *.MP* *.mkv *.MKV *.avi *.AVI *.mov *.MOV' --file-filter='All files | *' --title "Select soruce file")
+  SOURCE_PIC=$(zenity --file-selection --filename="$SOURCE_DIR"/ --file-filter='Supported media (jpg/png/gif/tiff/mp3/mp4/mkv/avi/mov) | *.jp*g *JP*G *.png *.PNG *.gif *.GIF *.tif* *.TIF^ *.mp* *.MP* *.mkv *.MKV *.avi *.AVI *.mov *.MOV' --file-filter='All files | *' --title "Select source file")
   if [ -z "$SOURCE_PIC" ]; then
    exit 1;
   fi
