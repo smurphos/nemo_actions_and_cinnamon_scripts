@@ -516,6 +516,22 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
+### Apply custom icon
+
+This action action provides an alteranative to the stock icon picker to quickly apply an image as a custom icon for a file or directory. Requires zenity.
+
+[apply_custom_emblem.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/apply_custom_icon.nemo_action)
+
+[apply_custom_emblem.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/apply_custom_icon.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/apply_custom_icon.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/apply_custom_icon.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt zenity`
+
 ### Set folder view recursively
 
 This action allows the user to set default folder view (list, compact or icon) and zoom level recursively to a directory and it's sub-directories.
