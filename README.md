@@ -520,9 +520,9 @@ Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
 This action action provides an alteranative to the stock icon picker to quickly apply an image as a custom icon for a file or directory. Requires zenity.
 
-[apply_custom_emblem.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/apply_custom_icon.nemo_action)
+[apply_custom_icon.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/apply_custom_icon.nemo_action)
 
-[apply_custom_emblem.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/apply_custom_icon.sh)
+[apply_custom_icon.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/apply_custom_icon.sh)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
