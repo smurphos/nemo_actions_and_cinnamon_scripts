@@ -21,7 +21,7 @@ function set_metadata {
 }
 
 # Select a view preference for selected selected directory and sub-directories
-VIEW=$(zenity --entry --entry-text="1" --text="Select a view-type for this folder and it's subfolders\n\n1) Icon View\n2) Compact View\n3) List View\n")
+VIEW=$(zenity --entry --entry-text="1" --title="Select view type" --text="Select a view type for $1/*\nEnter 1, 2 or 3\n\n1- Icon View\n2- Compact View\n3- List View\n")
 if [ -z "$VIEW" ]; then
  exit 1; 
 fi
@@ -30,7 +30,7 @@ fi
  exit 1
 fi
 # Select a zoom preference for selected directory and sub-directories
-ZOOM=$(zenity --entry --entry-text="1" --text="Select a zoom level for this folder and it's subfolders\n\\n0) Smallest\n1) Smaller \n2) Small\n3) Standard\n4) Large \n5) Larger \n6) Largest\n")
+ZOOM=$(zenity --entry --entry-text="1" --title="Select zoom level" --text="Select a zoom level for $1/*\n\Enter 0, 1, 2, 3, 4, 5 or 6\n\n\n0- 33%\n1- 50% \n2- 66%\n3- 100%\n4- 150% \n5- 200% \n6- 400%\n")
 if [ -z "$ZOOM" ]; then
  exit 1; 
 fi
