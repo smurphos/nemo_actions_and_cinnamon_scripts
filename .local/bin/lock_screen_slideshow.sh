@@ -52,11 +52,9 @@ if ( $SLIDESHOW && ! $SLIDESHOW_RANDOM ); then
 fi
 
 # Start the main loop to monitor screensaver status changes
-dbus-monitor --profile "interface='org.cinnamon.ScreenSaver', member='ActiveChanged'" | while read -r
+dbus-monitor --session "interface='org.cinnamon.ScreenSaver', member='ActiveChanged'" | while read -r STATE
 do
-  # Screensaver active loop.
-  while dbus-send --print-reply --dest=org.cinnamon.ScreenSaver /org/cinnamon/ScreenSaver org.cinnamon.ScreenSaver.GetActive | grep -q true
-  do
+  if echo "$STATE" | grep -q "boolean true"; then
     # If screensaver just activated check status of native background slide-show, get user background and either set static
     # lock screen background or start slideshow
     if ( ! $ACTIVE ) ; then
@@ -68,39 +66,44 @@ do
       if ( ! $SLIDESHOW ) ; then
         gsettings set org.cinnamon.desktop.background picture-uri "file://$STATIC_BACKGROUND"
       else
-        TIMER="$INTERVAL"
+        ((TIMER=SECONDS))
       fi
     fi
     # Update background if in slideshow mode
     if ( $SLIDESHOW ); then
-      if [ $TIMER == $INTERVAL ] ; then
-        if ( $SLIDESHOW_RANDOM ); then
-          LOCK_BACKGROUND="$(find "$SLIDESHOW_DIR" -iname '*.*p*g' | shuf -n1)"
-        else
-          LOCK_BACKGROUND="${IMAGES[$INDEX]}"
-          ((INDEX++))
-          if [ $INDEX -ge "${#IMAGES[@]}" ]; then
-            INDEX=0
+    # Start loop to update background whilst screensaver remains active
+      while dbus-send --print-reply --dest=org.cinnamon.ScreenSaver /org/cinnamon/ScreenSaver org.cinnamon.ScreenSaver.GetActive | grep -q "boolean true"
+      do
+        if (( TIMER <= SECONDS )) ; then
+          if ( $SLIDESHOW_RANDOM ); then
+            LOCK_BACKGROUND="$(find "$SLIDESHOW_DIR" -iname '*.*p*g' | shuf -n1)"
+          else
+            LOCK_BACKGROUND="${IMAGES[$INDEX]}"
+            ((INDEX++))
+            if [ $INDEX -ge "${#IMAGES[@]}" ]; then
+              INDEX=0
+            fi
+            if ( $PERSISTENT_INDEX ); then
+              echo "$INDEX" > ~/.config/smurphos_lock_screen_index
+            fi
           fi
-          if ( $PERSISTENT_INDEX ); then
-            echo "$INDEX" > ~/.config/smurphos_lock_screen_index
-          fi
+          gsettings set org.cinnamon.desktop.background picture-uri "file://$LOCK_BACKGROUND"
+          ((TIMER=SECONDS+INTERVAL))
         fi
-        gsettings set org.cinnamon.desktop.background picture-uri "file://$LOCK_BACKGROUND"
-        TIMER=0
-      fi
-      ((TIMER++))
+      # Sleep adds a slight delay to background reverting after the slideshow ends, but avoids excessive CPU by limiting the looped check of screensaver status to once per second.
+      sleep 1
+      done
     fi
-    sleep 1
-  done 
+  else
   # Set background back to the user background and unpause native slideshow on screensaver de-activation
-  if ( $ACTIVE ) ; then
-    gsettings set org.cinnamon.desktop.background picture-options "$DESK_MODE"
-    if ( $NATIVE_SLIDESHOW_STATE ) ; then
-      gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled "$NATIVE_SLIDESHOW_STATE"
-    else
-      gsettings set org.cinnamon.desktop.background picture-uri "$DESK_BACKGROUND"
+    if ( $ACTIVE ) ; then
+      gsettings set org.cinnamon.desktop.background picture-options "$DESK_MODE"
+      if ( $NATIVE_SLIDESHOW_STATE ) ; then
+        gsettings set org.cinnamon.desktop.background.slideshow slideshow-enabled "$NATIVE_SLIDESHOW_STATE"
+      else
+        gsettings set org.cinnamon.desktop.background picture-uri "$DESK_BACKGROUND"
+      fi
+      ACTIVE=false
     fi
-    ACTIVE=false
   fi
 done
