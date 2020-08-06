@@ -32,7 +32,7 @@ To install all of the nemo actions
 
 Install other dependencies used by the actions
 
-`sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey spacefm tree imagemagick`
+```sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey spacefm catfish tree imagemagick```
 
 Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
