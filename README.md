@@ -18,7 +18,7 @@ These instructions assume a Debian/Ubuntu based distro for the commands to insta
 
 First install git
 
-`sudo apt install git`
+``sudo apt install git``
 
 Then clone this repo
 
