@@ -1,10 +1,7 @@
 [Nemo Action]
-# Requires xdotool - apt install xdotool
-# Assumes default keyboard shortcut for next workspace is unchanged
-
 Name=_Previous Workspace
 Comment=Goto to previous workspace
-Exec=xdotool key ctrl+alt+Left
+Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.switchWorkspaceLeft >/dev/null'
 Selection=None
 Extensions=any;
 Icon-Name=go-previous-symbolic

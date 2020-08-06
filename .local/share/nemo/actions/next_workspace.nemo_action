@@ -1,10 +1,7 @@
 [Nemo Action]
-# Requires xdotool - apt install xdotool
-# Assumes default keyboard shortcut for next workspace is unchanged
-
 Name=_Next Workspace
 Comment=Goto to next workspace
-Exec=xdotool key ctrl+alt+Right
+Exec=sh -c 'dbus-send --dest=org.Cinnamon --print-reply /org/Cinnamon org.Cinnamon.switchWorkspaceRight >/dev/null'
 Selection=None
 Extensions=any;
 Icon-Name=go-next-symbolic
