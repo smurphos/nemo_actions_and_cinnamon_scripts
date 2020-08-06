@@ -32,7 +32,7 @@ To install all of the nemo actions
 
 Install other dependencies used by the actions
 
-`sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey tree imagemagick`
+`sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey spacefm tree imagemagick`
 
 Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
 
@@ -54,7 +54,9 @@ Once in the correct folder update your local copy with the latest commits, befor
 
 ### Sort actions
 
-Unfortunately the ordering of actions in Nemo's contect menu is based on the last modification date of the .nemo_action file.
+This action is obsolete in Nemo 4.6.x and later. Actions are sorted alphabetically by the filename of the action in the menu from this version of Nemo.
+
+In earlier versions the ordering of actions in Nemo's context menu is based on the last modification date of the .nemo_action file.
 
 This action and it's associated shell script will sort all installed actions alphabetically by the file name of the .nemo_action file. Assuming your action's display names are based on the file name this will result in actions being displayed in alphabetical order in the context menu.
 
@@ -125,8 +127,6 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/workspace_overview.nemo_action ~/.local/share/nemo/actions`
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/window_overview.nemo_action ~/.local/share/nemo/actions`
-
-`sudo apt install xdotool`
 
 ### Background slide-show actions
 
@@ -562,7 +562,19 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install mediainfo-gui`
 
-### Search folders
+### Search with Searchmonkey
+
+Opens the selected folder in Searchmonkey for more fine-tuned file system searches including search by contents.
+
+[catfish_search.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/catfish_search.nemo_action)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/catfish_search.nemo_action ~/.local/share/nemo/actions`
+
+`sudo apt install catfish`
+
+### Search with Searchmonkey
 
 Opens the selected folder in Searchmonkey for more fine-tuned file system searches including search by contents.
 
@@ -573,6 +585,18 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/searchmonkey.nemo_action ~/.local/share/nemo/actions`
 
 `sudo apt install searchmonkey`
+
+### Search with SpaceFM Search
+
+Opens the selected folder in SpaceFM's search tool for more fine-tuned file system searches including search by contents.
+
+[spacefm_search.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/spacefm_search.nemo_action)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/spacefm_search.nemo_action ~/.local/share/nemo/actions`
+
+`sudo apt install spacefm`
 
 ### View a tree-view directory structure in your browser
 
