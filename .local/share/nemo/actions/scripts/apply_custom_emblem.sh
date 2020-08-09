@@ -4,7 +4,7 @@
 #Requires zenity - apt install zenity
 #Requires imagemagick - apt install imagemagick
 #Requires wmctrl - apt install wmctrl
-#Requires xplayer-video-thumbnailer or ffmpegthumbnailer / ffmpg - apt install xplayer or apt install ffmpegthumbnailer ffmpeg
+#Requires xplayer-video-thumbnailer or totem-video-thumbnailer - apt install xplayer or apt install totem
 
 #Make a local emblems directory if it does not exist
 mkdir -p "$HOME"/.icons/hicolor/256x256/emblems
@@ -15,15 +15,7 @@ function create_emblem {
   if file "$2" | grep JPEG || file "$2" | grep PNG || file "$2" | grep TIFF; then
     convert "$2" -resize 256x256^ / -gravity center -extent 256x256 /tmp/emblem.png
   else
-    if [[ $3 == "xplayer-video-thumbnailer" ]]; then
-      xplayer-video-thumbnailer -s 1024 "$2" /tmp/thumbnail.png
-    else
-      if file "$2" | grep -i ".mp3"; then
-        ffmpeg -y -i "$2" /tmp/thumbnail.png
-      else
-        ffmpegthumbnailer -s 0 -i "$2" -o /tmp/thumbnail.png
-      fi
-    fi
+    "$3" -s 1024 "$2" /tmp/thumbnail.png
     convert /tmp/thumbnail.png -resize 256x256^ / -gravity center -extent 256x256 /tmp/emblem.png
   fi
   OUTPUT_FILE="$HOME"/.icons/hicolor/256x256/emblems/emblem-custom-$(identify -format %#\\n /tmp/emblem.png | cut -c 1-24)
@@ -35,10 +27,10 @@ function create_emblem {
 # Check which thumb-nailer is available
 if command -v xplayer-video-thumbnailer; then
   THUMBNAILER="xplayer-video-thumbnailer"
-elif command -v ffmpegthumbnailer && command -v ffmpeg; then
-  THUMBNAILER="ffmpegthumbnailer"
+elif command -v totem-video-thumbnailer; then
+  THUMBNAILER="totem-video-thumbnailer"
 else
-  zenity --info --width=250 --text="No supported thumb-nailer available. Please install xplayer or ffmpegthumbnailer / ffmpeg";
+  zenity --info --width=250 --text="No supported thumbnailer available. Please install xplayer or totem";
   exit 1
 fi
 

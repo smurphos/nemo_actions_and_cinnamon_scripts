@@ -34,7 +34,7 @@ Install other dependencies used by the actions
 
 `sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey spacefm catfish tree imagemagick`
 
-Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
+Either `sudo apt install xplayer` or `sudo apt install totem`
 
 Open Nemo > Preferences > Plugins and review any actions you wish to disable.
 
@@ -500,7 +500,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 This action allows the user to create and set custom emblems derived from image files, album art or video thumbnails to files and directories.
 For directories there is an option to use a random emblem generated from the directory contents and it can be run recursively on the selected directory and it's sub-directories.
 
-Requires zenity, wmctrl, imagemagick and either xplayer or ffmpeg and ffmpegthumbnailer to be installed.
+Requires zenity, wmctrl, imagemagick and either xplayer or totem to be installed.
 
 [apply_custom_emblem.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/apply_custom_emblem.nemo_action)
 
@@ -514,7 +514,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity wmctrl imagemagick`
 
-Either `sudo apt install xplayer` or `sudo apt install ffmpeg ffmpegthumbnailer`
+Either `sudo apt install xplayer` or `sudo apt install totem`
 
 ### Apply custom icon
 
