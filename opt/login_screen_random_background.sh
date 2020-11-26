@@ -34,30 +34,29 @@ if [ ! -f slick-greeter.conf ]; then
   echo "[Greeter]" >> slick-greeter.conf
 fi
 # Check for draw-user-backgrounds=false declaration and add it if missing
-if (! grep -q "draw-user-backgrounds=false" slick-greeter.conf) ; then 
+if ! grep -q "draw-user-backgrounds=false" slick-greeter.conf; then 
   echo "draw-user-backgrounds=false" >> slick-greeter.conf
 fi
 # Populate IMAGES array in sequential mode
-if ( ! $RANDOM_ORDER ); then
+if ! $RANDOM_ORDER; then
   if [ -f /opt/login_screen_index ]; then
-    INDEX=$(cat /opt/login_screen_index)
+    INDEX=$(< /opt/login_screen_index)
   else
 	INDEX=0
   fi
-  IMAGES=()
-  while IFS=  read -r -d $'\0'; do
+  while read -r -d $'\0'; do
     IMAGES+=("$REPLY")
-  done < <(find "$PICS_DIR" -iname '*.*p*g' -print0)
+  done <<< "$(find "$PICS_DIR" -iname '*.*p*g' -print0)"
 fi
 # Get current background (if any)
 OLD_PIC=$(grep "^background=" slick-greeter.conf)
 # Get new background
-if ( $RANDOM_ORDER ); then
+if $RANDOM_ORDER; then
   NEW_PIC="background=$(find "$PICS_DIR" -iname '*.*p*g' | shuf -n1)"
 else
   NEW_PIC="background=${IMAGES[$INDEX]}"
   ((INDEX++))
-  if [ $INDEX -ge "${#IMAGES[@]}" ]; then
+  if [ $INDEX -ge ${#IMAGES[@]} ]; then
     INDEX=0
   fi
   echo $INDEX > /opt/login_screen_index
