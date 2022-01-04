@@ -651,7 +651,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
 
-### Update a files modification date
+### Update a file's modification date
 
 [touch_file.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/touch_file.nemo_action)
 
@@ -678,13 +678,33 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install shellcheck`
 
+### Make a PDF out of images
+
+This action and associated shell script uses ImageMagick's `convert` tool to make a PDF out of the selected images and save it to the current directory.
+The PDF will bear the first selected file's name followed by a random number to prevent any overwriting. To disable the random number feature, remove `_$RANDOM` from the shell script and save the file.
+Your original images will NOT be destroyed.
+
+[Convert-images-to-pdf.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/Convert-images-to-pdf.nemo_action)
+
+[convert_images_to_PDF.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/convert_images_to_PDF.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/Convert-images-to-pdf.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/convert_images_to_PDF.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install imagemagick`
+
 # Cinnamon Scripts
 
 This is a small selection of feature scripts that add new features or improve existing features for the Cinnamon desktop.
 
 ## Cinnamon Scripts Installation
 
-These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` woth the equivalent for your distro's package management system.
+These instructions assume a Debian/Ubuntu based distro for the commands to install dependencies. For users of other distros please replace `sudo apt` with the equivalent for your distro's package management system.
 
 They also assume your distro is set up to automatically add `~/.local/bin/` to your $PATH when it exists. This is the case in Linux Mint main edition but not LMDE for example.
 
