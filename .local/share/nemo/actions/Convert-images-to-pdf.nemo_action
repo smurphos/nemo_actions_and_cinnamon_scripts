@@ -2,7 +2,7 @@
 Active=true
 Name=Make a PDF
 Comment=Combine selected images into a single PDF and save the resultant file in the current directory
-Exec=<scripts/convert_to_PDF.sh %F>
+Exec=<scripts/convert_images_to_PDF.sh %F>
 Icon-Name=pdf
 Dependencies=convert
 Selection=notnone
