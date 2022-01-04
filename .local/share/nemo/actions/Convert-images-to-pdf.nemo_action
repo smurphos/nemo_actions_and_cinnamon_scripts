@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Make a PDF
+Comment=Combine selected images into a single PDF and save the resultant file in the current directory
+Exec=<scripts/convert_to_PDF.sh %F>
+Icon-Name=pdf
+Dependencies=convert
+Selection=notnone
+Extensions=png;jpeg;jpg;tiff;bmp;gif;raw;svg;eps;xcf;psd;ai;cdr;tif;heif;indd;jiff;jfif;
+Quote=double
