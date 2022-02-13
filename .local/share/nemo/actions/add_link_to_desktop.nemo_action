@@ -2,7 +2,7 @@
 # An action to create a link .desktop file to the directory on the Desktop
 # Has a link emblem
 Name=Add _Link To Desktop
-Comment=Create a link to #F on the desktop
+Comment=Create a link to %F on the desktop
 Exec=<scripts/add_link_to_desktop.sh %F>
 Icon-Name=insert-link-symbolic
 Selection=s

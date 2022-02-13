@@ -1,6 +1,6 @@
 [Nemo Action]
 Name=Apply Custom _Emblem
-Comment=Apply a custom picture emblem to #F and optionally it's sub-directories
+Comment=Apply a custom picture emblem to %F and optionally it's sub-directories
 Exec=<scripts/apply_custom_emblem.sh %F>
 Icon-Name=image-x-generic-symbolic
 Selection=s

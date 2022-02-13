@@ -1,6 +1,6 @@
 [Nemo Action]
 Name=_Copy To (Admin)
-Comment=Copy #F to a destination of your choice elevating privileges if necessary.
+Comment=Copy %F to a destination of your choice elevating privileges if necessary.
 Exec=<scripts/copy_to_admin.sh %F>
 Icon-Name=edit-copy-symbolic
 Selection=notnone

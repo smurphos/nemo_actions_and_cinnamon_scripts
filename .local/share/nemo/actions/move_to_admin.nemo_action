@@ -1,6 +1,6 @@
 [Nemo Action]
 Name=_Move To (Admin)
-Comment=Move #F to a destination of your choice elevating privileges if necessary.
+Comment=Move %F to a destination of your choice elevating privileges if necessary.
 Exec=<scripts/move_to_admin.sh %F>
 Icon-Name=edit-cut-symbolic
 Selection=notnone
