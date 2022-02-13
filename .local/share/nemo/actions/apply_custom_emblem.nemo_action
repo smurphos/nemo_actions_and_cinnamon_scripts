@@ -5,6 +5,6 @@ Exec=<scripts/apply_custom_emblem.sh %F>
 Icon-Name=image-x-generic-symbolic
 Selection=s
 Extensions=any;
-EscapeSpaces=true
+Quote=double
 Dependencies=zenity;wmctrl;convert;identify;
 
