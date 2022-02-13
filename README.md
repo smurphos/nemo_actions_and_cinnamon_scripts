@@ -189,6 +189,28 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ## General Actions
 
+### Attach to Email Actions
+
+Nemo's native Send in Email action was removed in Nemo 4.8. Here are two potential replacements. The first one is specific to Thunderbird as an email client. The second is generic and uses xdg-email and has been tested with both Thunderbird and Evolution. Please note that on some distros xdg-email may have been patched to remove the ability to add attachments. At time of writing xdg-email does work on Linux Mint 20.x
+
+[attach_to_email_tbird.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/attach_to_email_tbird.nemo_action)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/attach_to_email_tbird.nemo_action ~/.local/share/nemo/actions`
+
+[attach_to_email_xdg-email.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/attach_to_email_xdg-email.nemo_action)
+
+[attach_to_email_xdg-email.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/attach_to_email_xdg-email.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/attach_to_email_xdg-email.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/attach_to_email_xdg-email.sh ~/.local/share/nemo/actions/scripts`
+
 ### Edit as other user actions
 
 These actions allow you to open text files with a password prompt for elevated privileges if necessary from a regular instance of Nemo. They will all open the file with the specified text-editor using sudoedit to elevate privileges as the owner of the file if that is not the user. The could be as root or another user on the system.

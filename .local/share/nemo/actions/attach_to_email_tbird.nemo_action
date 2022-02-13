@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=_Attach to email
+Comment=Attach %F to email in Thunderbird
+Exec=thunderbird -compose to=,"attachment='%F'"
+Icon-Name=mail-attachment-symbolic
+Selection=notnone
+Extensions=nodirs
+Separator=,
+Dependencies=thunderbird;
