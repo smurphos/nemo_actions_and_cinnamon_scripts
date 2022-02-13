@@ -130,17 +130,24 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ### Background slide-show actions
 
-An action to quickly toggle the desktop background slide-show, along with an action to select the next wallpaper when the slide-show is active.
+An action to quickly toggle the desktop background slide-show.
 
 [toggle_slideshow.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/toggle_slideshow.nemo_action)
-
-[next-wallpaper.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/next-wallpaper.nemo_action)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/toggle_slideshow.nemo_action ~/.local/share/nemo/actions`
 
+An action to select the next-wallpaper in the desktop slide-show - if the slide-show is currently disabled this action will also 
+enable the slide-show.
+
+[next-wallpaper.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/next-wallpaper.nemo_action)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/next-wallpaper.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/next-wallpaper.sh ~/.local/share/nemo/actions/scripts`
 
 ### Session management actions
 
