@@ -149,6 +149,18 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/next-wallpaper.sh ~/.local/share/nemo/actions/scripts`
 
+An action to open the current wallpaper's directory in the file manager, or in the default image viewing application. Requires zenity.
+
+[open-wallpaper.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/open-wallpaper.nemo_action)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/open-wallpaper.nemo_action ~/.local/share/nemo/actions`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/open-wallpaper.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install zenity`
+
 ### Session management actions
 
 The first two actions give quick access from the desktop context menu to the shutdown and logoff session dialogues.
