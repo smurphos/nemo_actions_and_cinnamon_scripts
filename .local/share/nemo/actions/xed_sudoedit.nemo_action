@@ -2,7 +2,7 @@
 
 Name=_Xed (Sudoedit)
 Comment=Open %F with xed opening as different user when needed via sudoedit.
-Exec=<scripts/xed_sudoedit_check.sh %F>
+Exec=<action_scripts/xed_sudoedit_check.sh %F>
 Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s

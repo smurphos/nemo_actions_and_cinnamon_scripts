@@ -2,7 +2,7 @@
 # Allows user to open current wallpaper.
 Name=Open Wallpaper
 Comment=Open current desktop wallpaper
-Exec=<scripts/open_wallpaper.sh>
+Exec=<action_scripts/open_wallpaper.sh>
 Icon-Name=image-x-generic-symbolic
 Selection=none
 Extensions=any;

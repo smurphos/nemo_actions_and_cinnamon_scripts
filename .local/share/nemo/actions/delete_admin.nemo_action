@@ -3,7 +3,7 @@
 # Will request password authentication if elevated privileges are needed to complete the action.
 Name=_Delete (Admin)
 Comment=Delete %F elevating privileges if necessary
-Exec=<scripts/delete_admin.sh %F>
+Exec=<action_scripts/delete_admin.sh %F>
 Icon-Name=edit-delete-symbolic
 Selection=notnone
 Extensions=any;

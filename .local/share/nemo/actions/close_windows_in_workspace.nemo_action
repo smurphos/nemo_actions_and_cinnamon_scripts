@@ -4,7 +4,7 @@
 # Requires wmctrl (apt install wmctrl) and xdotool (apt install xdotool).
 Name=Close All Windows In _Workspace
 Comment=Close all windows in current workspace
-Exec=<scripts/close_windows.sh workspace>
+Exec=<action_scripts/close_windows.sh workspace>
 Selection=None
 Extensions=any;
 Icon-Name=application-exit-symbolic

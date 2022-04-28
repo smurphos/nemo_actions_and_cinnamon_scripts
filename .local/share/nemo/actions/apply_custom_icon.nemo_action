@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Apply Custom _Icon
 Comment=Apply a custom icon to %F
-Exec=<scripts/apply_custom_icon.sh %F>
+Exec=<action_scripts/apply_custom_icon.sh %F>
 Icon-Name=image-x-generic-symbolic
 Selection=s
 Extensions=any

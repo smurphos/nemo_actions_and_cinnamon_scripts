@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=_Attach to email
 Comment=Attach %F to email in default mail application
-Exec=<scripts/attach_to_email_xdg-email.sh %F>
+Exec=<action_scripts/attach_to_email_xdg-email.sh %F>
 Icon-Name=mail-attachment-symbolic
 Selection=notnone
 Extensions=nodirs

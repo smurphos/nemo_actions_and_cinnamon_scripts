@@ -3,7 +3,7 @@
 # Doesn't have a link emblem
 Name=Add _Launcher To Desktop
 Comment=Create a launcher to %F on the Desktop
-Exec=<scripts/add_launcher_to_desktop.sh %F>
+Exec=<action_scripts/add_launcher_to_desktop.sh %F>
 Icon-Name=insert-object-symbolic
 Selection=s
 Extensions=dir;

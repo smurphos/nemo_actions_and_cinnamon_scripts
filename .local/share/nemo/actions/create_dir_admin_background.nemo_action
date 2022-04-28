@@ -4,7 +4,7 @@
 # Requires companion script create_dir_admin.sh
 Name=Create _Directory (Admin)
 Comment=Create a directory in %F elevating privileges in necessary
-Exec=<scripts/create_dir_admin.sh %F>
+Exec=<action_scripts/create_dir_admin.sh %F>
 Selection=none
 Extensions=dir;
 Icon-Name=folder-new-symbolic

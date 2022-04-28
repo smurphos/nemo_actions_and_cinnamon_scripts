@@ -2,7 +2,7 @@
 
 Name=_Geany (Sudoedit)
 Comment=Open %F with geany, opening as different user when needed via sudoedit.
-Exec=<scripts/geany_sudoedit_check.sh %F>
+Exec=<action_scripts/geany_sudoedit_check.sh %F>
 Icon-Name=text-editor-symbolic
 #Stock-Id=
 Selection=s

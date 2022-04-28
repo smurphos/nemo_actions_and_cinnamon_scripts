@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Show _Parent Package
 Comment=Display a dialogue that shows which package %F's is from
-Exec=<scripts/show_parent_package.sh %F>
+Exec=<action_scripts/show_parent_package.sh %F>
 Icon-Name=package-x-generic-symbolic
 Selection=s
 Extensions=any;

@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=_Rename (Admin)
 Comment=Rename %F elevating privileges if necessary
-Exec=<scripts/rename_admin.sh %F %P>
+Exec=<action_scripts/rename_admin.sh %F %P>
 Icon-Name=document-edit-symbolic
 Selection=s
 Extensions=any;

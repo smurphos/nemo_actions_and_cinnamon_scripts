@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=_Print Tree
 Comment=Print tree output for %F to a html file and display in default browser
-Exec=<scripts/print_tree.sh %F>
+Exec=<action_scripts/print_tree.sh %F>
 Icon-Name=view-list-symbolic
 Selection=any
 Extensions=dir;

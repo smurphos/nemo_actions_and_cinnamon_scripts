@@ -3,7 +3,7 @@
 # If so this action is your friend.
 Name=Copy _Random Files
 Comment=Copy a random selection of files from %F and paste them to a folder of your choice.
-Exec=<scripts/get_random_files.sh %F>
+Exec=<action_scripts/get_random_files.sh %F>
 Icon-Name=media-playlist-shuffle-symbolic
 Selection=any
 Extensions=dir;

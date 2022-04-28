@@ -4,7 +4,7 @@
 # Requires companion script create_file_admin.sh
 Name=Create _File (Admin)
 Comment=Create a file in %F elevating privileges in necessary
-Exec=<scripts/create_file_admin.sh %F>
+Exec=<action_scripts/create_file_admin.sh %F>
 Selection=none
 Extensions=dir;
 Icon-Name=document-new-symbolic

@@ -1,7 +1,7 @@
 [Nemo Action]
 Name=Disk _Usage
 Comment=Gives total disk usage for selected items.
-Exec=<scripts/disk_usage.sh %F>
+Exec=<action_scripts/disk_usage.sh %F>
 Extensions=any
 Icon-Name=drive-multidisk-symbolic
 Selection=notnone
