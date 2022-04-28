@@ -32,7 +32,7 @@ To install all of the nemo actions
 
 Install other dependencies used by the actions
 
-`sudo apt install zenity xdotool wmctrl gprename mediainfo-gui shellcheck searchmonkey spacefm catfish tree imagemagick`
+`sudo apt install zenity xdotool wmctrl mediainfo-gui shellcheck tree imagemagick`
 
 Either `sudo apt install xplayer` or `sudo apt install totem`
 
@@ -49,30 +49,6 @@ Once in the correct folder update your local copy with the latest commits, befor
 `git pull origin; cd ..`
 
 ## Nemo Actions Index
-
-## Action management actions
-
-### Sort actions
-
-This action is obsolete in Nemo 4.6.x and later. Actions are sorted alphabetically by the filename of the action in the menu from this version of Nemo.
-
-In earlier versions the ordering of actions in Nemo's context menu is based on the last modification date of the .nemo_action file.
-
-This action and it's associated shell script will sort all installed actions alphabetically by the file name of the .nemo_action file. Assuming your action's display names are based on the file name this will result in actions being displayed in alphabetical order in the context menu.
-
-[sort_actions.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/sort_actions.nemo_action)
-
-[sort_actions.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/sort_actions.sh)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/sort_actions.nemo_action ~/.local/share/nemo/actions`
-
-`mkdir -p ~/.local/share/nemo/actions/scripts`
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/sort_actions.sh ~/.local/share/nemo/actions/scripts`
-
-`sudo apt install zenity`
 
 ## Desktop context menu actions
 
@@ -567,23 +543,6 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/scripts`
 
-### Bulk rename actions
-
-Both these actions open the bulk rename utility GPrename. One action is for a single folder selection to bulk rename files in that folder.
-The other is for multiple selections and opens GPrename in the parent folder.
-
-[bulk_rename_files.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/bulk_rename_files.nemo_action)
-
-[bulk_rename_folders.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/bulk_rename_folders.nemo_action)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/bulk_rename_files.nemo_action ~/.local/share/nemo/actions`
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/bulk_rename_folders.nemo_action ~/.local/share/nemo/actions`
-
-`sudo apt install gprename`
-
 ### Apply custom emblems
 
 This action allows the user to create and set custom emblems derived from image files, album art or video thumbnails to files and directories.
@@ -650,42 +609,6 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/media-info.nemo_action ~/.local/share/nemo/actions`
 
 `sudo apt install mediainfo-gui`
-
-### Search with Searchmonkey
-
-Opens the selected folder in Searchmonkey for more fine-tuned file system searches including search by contents.
-
-[catfish_search.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/catfish_search.nemo_action)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/catfish_search.nemo_action ~/.local/share/nemo/actions`
-
-`sudo apt install catfish`
-
-### Search with Searchmonkey
-
-Opens the selected folder in Searchmonkey for more fine-tuned file system searches including search by contents.
-
-[searchmonkey.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/searchmonkey.nemo_action)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/searchmonkey.nemo_action ~/.local/share/nemo/actions`
-
-`sudo apt install searchmonkey`
-
-### Search with SpaceFM Search
-
-Opens the selected folder in SpaceFM's search tool for more fine-tuned file system searches including search by contents.
-
-[spacefm_search.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/spacefm_search.nemo_action)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/spacefm_search.nemo_action ~/.local/share/nemo/actions`
-
-`sudo apt install spacefm`
 
 ### View a tree-view directory structure in your browser
 

@@ -1,8 +1,0 @@
-[Nemo Action]
-Name=Sort _Actions
-Comment=Sort actions by filename.
-Exec=<scripts/sort_actions.sh>
-Selection=none
-Extensions=none;
-Icon-Name=view-sort-ascending-symbolic
-Quote=double
