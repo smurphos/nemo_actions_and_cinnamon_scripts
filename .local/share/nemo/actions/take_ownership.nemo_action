@@ -1,0 +1,10 @@
+[Nemo Action]
+Name=Take _Ownership (Admin)
+Comment=Take ownership of %F
+Exec=<scripts/take_ownership.sh %F>
+Icon-Name=system-users-symbolic
+Selection=notnone
+Extensions=any;
+Conditions=exec <scripts/check_ownership.sh %F>;
+EscapeSpaces=true
+Dependencies=zenity;

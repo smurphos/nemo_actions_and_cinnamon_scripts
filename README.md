@@ -429,6 +429,30 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
 
+### Take Ownership (Admin)
+
+Quickly bring files or directories under the current user's ownership.  Supports single and multiple selections but will only display for multiple selections if all selections are not owned by the current user.
+
+[take_ownership.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/take_ownership.nemo_action)
+
+[take_ownership.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/take_ownership.sh)
+
+[check_ownership.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/scripts/check_ownership.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/take_ownership.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/take_ownership.sh ~/.local/share/nemo/actions/scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/check_ownership.sh ~/.local/share/nemo/actions/scripts`
+
+`sudo apt install zenity`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+
 ### Disk Usage action
 
 Select single or multiple files / directories to be presented with a zenity window showing the total disk usage of the selection.
