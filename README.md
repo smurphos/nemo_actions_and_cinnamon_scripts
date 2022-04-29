@@ -578,7 +578,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/apply_custom_icon.sh ~/.local/share/nemo/actions/scripts`
 
-`sudo apt zenity`
+`sudo apt install zenity`
 
 ### Set folder view recursively
 
