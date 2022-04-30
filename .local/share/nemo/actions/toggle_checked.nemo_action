@@ -3,6 +3,6 @@ Name=Toggle _Check
 Comment=Adds a checked emblem to a file/folder. If the file/folder is already checked, removes emblem.
 Exec=<action_scripts/toggle_checked.sh %F>
 Icon-Name=checkbox-checked-symbolic
-Selection=a
+Selection=any
 Extensions=any;
 EscapeSpaces=true
