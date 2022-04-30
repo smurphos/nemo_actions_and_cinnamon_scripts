@@ -68,9 +68,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/close_all_windows.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/close_windows.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/close_windows.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install xdotool wmctrl`
 
@@ -123,7 +123,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/next-wallpaper.nemo_action ~/.local/share/nemo/actions`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/next-wallpaper.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/next-wallpaper.sh ~/.local/share/nemo/actions/action_scripts`
 
 An action to open the current wallpaper's directory in the file manager, or in the default image viewing application. Requires zenity.
 
@@ -133,7 +133,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/open-wallpaper.nemo_action ~/.local/share/nemo/actions`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/open-wallpaper.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/open-wallpaper.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -195,9 +195,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/attach_to_email_xdg-email.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/attach_to_email_xdg-email.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/attach_to_email_xdg-email.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Edit as other user actions
 
@@ -213,9 +213,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/nano_sudoedit.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/nano_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/nano_sudoedit_check.sh ~/.local/share/nemo/actions/action_scripts`
 
 [xed_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/xed_sudoedit.nemo_action)
 
@@ -225,13 +225,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/xed_sudoedit.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/xed_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/xed_sudoedit_check.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 [geany_sudoedit.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/geany_sudoedit.nemo_action)
 
@@ -241,13 +241,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/geany_sudoedit.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/geany_sudoedit_check.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/geany_sudoedit_check.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### File actions as admin
 
@@ -269,13 +269,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/copy_to_admin.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/copy_to_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/copy_to_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Move to (Admin)
 
@@ -289,13 +289,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/move_to_admin.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/move_to_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/move_to_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Creating links (Admin)
 
@@ -309,13 +309,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_link_in_target.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_link_in_target.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_link_in_target.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Create Directory (Admin)
 
@@ -333,13 +333,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_dir_admin_background.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_dir_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_dir_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Create File (Admin)
 
@@ -357,13 +357,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_file_admin_background.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_file_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/create_file_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Delete (Admin)
 
@@ -377,13 +377,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/delete_admin.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/delete_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/delete_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Rename (Admin)
 
@@ -397,13 +397,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/rename_admin.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/rename_admin.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/rename_admin.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Take Ownership (Admin)
 
@@ -419,15 +419,15 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/take_ownership.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/take_ownership.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/take_ownership.sh ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_ownership.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_ownership.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Make Executable (Admin)
 
@@ -443,15 +443,15 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/make_executable.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/make_executable.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/make_executable.sh ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_executable.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_executable.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/zenity_askpass.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Disk Usage action
 
@@ -466,9 +466,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/disk_usage.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/disk_usage.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/disk_usage.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -484,9 +484,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/show_metadata.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/show_metadata.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/show_metadata.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -503,9 +503,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/show_parent_package.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/show_parent_package.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/show_parent_package.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -525,9 +525,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_link_to_desktop.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Add launcher to desktop
 
@@ -539,9 +539,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Apply custom emblems
 
@@ -558,7 +558,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/apply_custom_emblem.nemo_action ~/.local/share/nemo/actions`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/apply_custom_emblem.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/apply_custom_emblem.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity wmctrl imagemagick`
 
@@ -576,7 +576,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/apply_custom_icon.nemo_action ~/.local/share/nemo/actions`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/apply_custom_icon.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/apply_custom_icon.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -594,7 +594,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/set_folder_view_recursively.nemo_action ~/.local/share/nemo/actions`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/set_folder_view_recursively.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/set_folder_view_recursively.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity wmctrl`
 
@@ -622,9 +622,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/print_tree.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/print_tree.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/print_tree.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install tree`
 
@@ -641,9 +641,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/get_random_file.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/get_random_files.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/get_random_files.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 
@@ -659,9 +659,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/toggle_checked.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/toggle_checked.sh ~/.local/share/nemo/actions/action_scripts`
 
 ### Update a files modification date
 
@@ -684,9 +684,9 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/toggle_checked.nemo_action ~/.local/share/nemo/actions`
 
-`mkdir -p ~/.local/share/nemo/actions/scripts`
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/toggle_checked.sh ~/.local/share/nemo/actions/scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/toggle_checked.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install shellcheck`
 
