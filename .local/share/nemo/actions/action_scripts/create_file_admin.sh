@@ -12,7 +12,7 @@ fi
 #Is destination under ownership of user?
 DESTOWNER=$(stat -c %U "$1")
 if [ "$DESTOWNER" != "$USER" ] ; then
-  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh"
   sudo -A -u "$DESTOWNER" touch "$1/$NAME"
 else
   touch "$1/$NAME"

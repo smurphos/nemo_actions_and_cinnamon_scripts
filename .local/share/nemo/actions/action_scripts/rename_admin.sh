@@ -12,7 +12,7 @@ if [ -e "$2/$NAME" ]; then
 fi
 #Is location writeable?
 if [ ! -w "$2" ] ; then
-  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh" 
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh" 
   sudo -A mv "$1" "$2/$NAME"
 else
   mv "$1" "$2/$NAME"

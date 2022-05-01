@@ -6,7 +6,7 @@ if [ -z "$DEST" ]; then
 fi
 #Get ownership of $DEST
 DESTOWNER=$(stat -c %U "$DEST")
-export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh"
 SUCCESSSTRING="Successfully copied:"
 for i in "$@"; do
 #Check not overwriting an existing file or directory

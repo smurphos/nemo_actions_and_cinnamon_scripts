@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIRM=false
 SUCCESSSTRING="Successfully deleted:"
-export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh"
 for i in "$@"; do
 #Is directory writeable?
   if [ ! -w "$(dirname "$i")" ]; then

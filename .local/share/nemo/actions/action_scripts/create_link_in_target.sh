@@ -21,7 +21,7 @@ if [ -e "$DEST/$NAME" ]; then
 fi
 #Is destination writeable?
 if [ ! -w "$DEST" ] ; then
-  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/scripts/zenity_askpass.sh"
+  export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh"
   sudo -A ln -s "$1" "$DEST/$NAME"
 else
   ln -s "$1" "$DEST/$NAME"
