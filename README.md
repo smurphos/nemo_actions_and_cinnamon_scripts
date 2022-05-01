@@ -407,7 +407,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ### Take Ownership (Admin)
 
-Quickly bring files or directories under the current user's ownership.  Supports single and multiple selections but will only display for multiple selections if all selections are not owned by the current user.
+Quickly bring files or directories under the current user's ownership.  Supports single and multiple selections of files and directories but will only display for multiple selections if all selections are not owned by the current user. If directories are included in the selection the user is given the option to take ownership recursively.
 
 [take_ownership.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/take_ownership.nemo_action)
 
