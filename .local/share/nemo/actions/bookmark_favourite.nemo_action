@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Add to Bookmarks & Favourites
+Comment=Add %F as a Bookmark and Favourite
+Exec=<action_scripts/bookmark_favourite.sh %U>
+Selection=notnone
+Extensions=dir;
+Icon-Name=emblem-favorite-symbolic
+Conditions=exec <action_scripts/check_bookmark_favourite.sh %U>
+Quote=double

@@ -177,6 +177,26 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ## General Actions
 
+### Add to Favourites and Bookmarks
+
+An action to add a single or multiple selection of directories to nemo bookmarks and nemo favourites. Main use case is for those who use tree-view in the side-pane where favourites but not bookmarks is available to maintain a synced selection of favourites and bookmarks.
+
+[bookmark_favourite.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/bookmark_favourite.nemo_action)
+
+[bookmark_favourite.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/bookmark_favourite.sh)
+
+[check_bookmark_favourite.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/check_bookmark_favourite.sh)
+
+To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/bookmark_favourite.nemo_action ~/.local/share/nemo/actions`
+
+`mkdir -p ~/.local/share/nemo/actions/action_scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/bookmark_favourite.sh ~/.local/share/nemo/actions/action_scripts`
+
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_bookmark_favourite.sh ~/.local/share/nemo/actions/action_scripts`
+
 ### Attach to Email Actions
 
 Nemo's native Send in Email action was removed in Nemo 4.8. Here are two potential replacements. The first one is specific to Thunderbird as an email client. The second is generic and uses xdg-email and has been tested with both Thunderbird and Evolution. Please note that on some distros xdg-email may have been patched to remove the ability to add attachments. At time of writing xdg-email does work on Linux Mint 20.x
