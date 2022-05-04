@@ -1,10 +1,10 @@
 [Nemo Action]
-Name=Make _Executable (Admin)
+Name=Make Executable (Admin)
 Comment=Mark %F as executable elevating privileges if necessary.
 Exec=<action_scripts/make_executable.sh %F>
 Icon-Name=application-x-executable-symbolic
 Selection=notnone
 Extensions=nodirs;
-Conditions=exec <action_scripts/check_executable.sh false %F>;
-EscapeSpaces=true
+Conditions=exec <action_scripts/check_not_executable.sh %F>;
+Quote=double
 Dependencies=zenity;

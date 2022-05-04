@@ -407,7 +407,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ### Take Ownership (Admin)
 
-Quickly bring files or directories under the current user's ownership.  Supports single and multiple selections of files and directories but will only display for multiple selections if all selections are not owned by the current user. If directories are included in the selection the user is given the option to take ownership recursively.
+Quickly bring files or directories under the current user's ownership.  Supports single and multiple selections of files and directories. For multiple selections will display if at least one selection is not under the users ownership. If directories are included in the selection the user is given the option to take ownership recursively.
 
 [take_ownership.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/take_ownership.nemo_action)
 
@@ -431,13 +431,13 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ### Make Executable (Admin)
 
-Quickly add executable bit to files.  Supports single and multiple selections but will only display for multiple selections if all selections are not currently executable.
+Quickly add executable bit to files.  Supports single and multiple selections. For multiple selections will display if at least one selection is not currently executable.
 
 [make_executable.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/make_executable.nemo_action)
 
 [make_executable.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/make_executable.sh)
 
-[check_executable.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/check_executable.sh)
+[check_not_executable.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/check_not_executable.sh)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
@@ -447,7 +447,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/make_executable.sh ~/.local/share/nemo/actions/action_scripts`
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_executable.sh ~/.local/share/nemo/actions/action_scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/check_not_executable.sh ~/.local/share/nemo/actions/action_scripts`
 
 `sudo apt install zenity`
 

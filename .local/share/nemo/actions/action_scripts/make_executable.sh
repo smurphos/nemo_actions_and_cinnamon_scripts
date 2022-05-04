@@ -2,6 +2,9 @@
 export SUDO_ASKPASS="$HOME/.local/share/nemo/actions/action_scripts/zenity_askpass.sh"
 SUCCESSSTRING="Made executable:"
 for i in "$@"; do
+if [ -x "$i" ]; then
+  continue
+fi
 #Get ownership
   OWNER=$(stat -c %U "$i")
   if [ "$OWNER" != "$USER" ] ; then
