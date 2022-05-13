@@ -319,7 +319,7 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 ### Creating links (Admin)
 
-Supports single selections only.
+Supports single selections only. Create a link to a file / folder in a directory of your choice.
 
 [create_link_in_target.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/create_link_in_target.nemo_action)
 
@@ -529,39 +529,15 @@ To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cin
 
 `sudo apt install zenity`
 
-### Add to desktop actions
+### Create link on desktop
 
-Two actions to quickly create a desktop link to a selected directory.
-Add link to desktop creates a link desktop file with the link emblem on the icon. However these links function slightly differently from a regular symlink as when opened it will open the original target location.
-Add launcher to desktop will result in a plain folder without a link emblem. The function is otherwise identical to add link to desktop
+An action to quickly create a symlink on the Desktop to any single file or folder selection
 
-### Add link to desktop
-
-[add_link_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_link_to_desktop.nemo_action)
-
-[add_link_to_desktop.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/add_link_to_desktop.sh)
+[create_link_on_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/create_link_on_desktop.nemo_action)
 
 To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
 
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_link_to_desktop.nemo_action ~/.local/share/nemo/actions`
-
-`mkdir -p ~/.local/share/nemo/actions/action_scripts`
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_link_to_desktop.sh ~/.local/share/nemo/actions/action_scripts`
-
-### Add launcher to desktop
-
-[add_launcher_to_desktop.nemo_action](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action)
-
-[add_launcher_to_desktop.sh](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts/blob/master/.local/share/nemo/actions/action_scripts/add_launcher_to_desktop.sh)
-
-To install after [cloning repo](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts#nemo-action-installation)
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/add_launcher_to_desktop.nemo_action ~/.local/share/nemo/actions`
-
-`mkdir -p ~/.local/share/nemo/actions/action_scripts`
-
-`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/action_scripts/add_launcher_to_desktop.sh ~/.local/share/nemo/actions/action_scripts`
+`cp -r ./nemo_actions_and_cinnamon_scripts/.local/share/nemo/actions/create_link_on_desktop.nemo_action ~/.local/share/nemo/actions`
 
 ### Apply custom emblems
 

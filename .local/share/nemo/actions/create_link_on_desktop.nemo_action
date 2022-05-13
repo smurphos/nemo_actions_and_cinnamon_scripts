@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Create Link on Desktop
+Comment=Create a link to %F on the desktop
+Exec=sh -c 'if ln -s "%F" -t "$(xdg-user-dir DESKTOP)"; then notify-send "Desktop symlink added for" "%F"; else notify-send "Failed to create desktop symlink for" "%F"; fi'
+Icon-Name=insert-link-symbolic
+Selection=s
+Extensions=any;
+
