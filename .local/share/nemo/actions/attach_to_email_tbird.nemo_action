@@ -7,3 +7,4 @@ Selection=notnone
 Extensions=nodirs
 Separator=,
 Dependencies=thunderbird;
+EscapeSpaces=false
